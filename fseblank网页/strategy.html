@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>LemonQuant-market</title>
+	<title>LemonQuant-strategy</title>
 	<!--Css Links-->
 	<link href="../assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="../assets/css/app.css" rel="stylesheet" type="text/css">
@@ -15,9 +15,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond:500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="marketTable.css" rel="stylesheet" type="text/css">
+	<!--=== 外部插件 ===-->
+<!--	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+	<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!--	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	<script src="https://cdn.bootcss.com/moment.js/2.22.0/moment-with-locales.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
 </head>
+
 <body>
-	<!--===navigation===-->
+	
+	<!--=== navigation ===-->
 	<header id="nav" class="header">
 		<!--menu-->
 		<div class="navbar navbar-expand-md navbar-light default-menu justify-content-between" role="navigation" style="background-color: #3D5C63">
@@ -60,119 +70,80 @@
         <div class="container-fluid">
             <div class="page-header-content text-center">
                 <!--<div class="page-header-tag">Post Detail</div>-->
-                <div class="page-header-title" style="font-family: 'MF ShangYa (Noncommercial)'">查看实时市场行情</div>
+                <div class="page-header-title" style="font-family: 'MF ShangYa (Noncommercial)'">设计股票交易策略</div>
             </div>
         </div>
     </section>
 	
-	<!--=== 行情搜索栏 ===-->
+	<!--=== 策略功能栏 ===-->	
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-3 offset-1 form-inline" style="padding: 10px 0 10px 0;">
-				<label style="margin-right: 10px;">菜单</label>
-				<select name="" class="market-select-box">
-					<option value="0">种类一</option>
-					<option value="1">种类二</option>
-					<option value="2">种类三</option>
-				</select>
+			<div class="col-3" style="padding: 10px">
+				<a href="strategy.html" class="btn btn-block btn-info" role="button">新建策略</a>
+				<a href="MyStrategy.html" class="btn btn-block btn-info" role="button">我的策略</a>
+				<a href="#" class="btn btn-block btn-info" role="button">策略回测</a>
 			</div>
-			<div class="col-8" style="padding: 10px 0 10px 0;">
-				<input type="text" class="search" placeholder="搜索">
-				<input type="button" name="" id="" class="btn">
-			</div>
-		</div>
-	</div>
-	
-	<!--=== 行情列表 ===-->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="boxhead col-11">
-					<h2>※个股行情</h2>
-				</div>
-			<div class="col-2 offset-2 text-info" style="padding: 10px;">
-				<a href="#">全部股票</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">上证A股</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">深证A股</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">创业板</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">中小板</a>
-			</div>
-			<div class="table-responsive">
-				<table class="table table-hover" style="font-size: 10px;">
-					<thead>
-						<th style="width:6%">序号</th>
-                    		<th style="width:6%">代码</th>
-		                    <th style="width:8%">名称</th>
-		                    <th style="width:6%" ><a href="javascript:void(0)" field="xj" >现价<i></i></a></th>
-        		            <th style="width:9%"  class="cur"><a href="javascript:void(0)" field="zdf" order="desc"  class="desc">涨跌幅(%)<i></i></a></th>
-                 		    <th style="width:6%" ><a href="javascript:void(0)" field="zd" >涨跌<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="zs" >涨速(%)<i></i></a></th>
-     		                <th style="width:8%" ><a href="javascript:void(0)" field="hs" >换手(%)<i></i></a></th>
-            		        <th style="width:6%" ><a href="javascript:void(0)" field="lb" >量比<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="zf" >振幅(%)<i></i></a></th>
-        		            <th style="width:7%" ><a href="javascript:void(0)" field="cje" >成交额<i></i></a></th>
-                		    <th style="width:7%" ><a href="javascript:void(0)" field="ltg" >流通股<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="ltsz" >流通市值<i></i></a></th>
-        		            <th style="width:7%" ><a href="javascript:void(0)" field="syl" >市盈率<i></i></a></th>
-					</thead>
-					<tbody>
-						<tr>
-							<td>01</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>02</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>03</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="col-9" style="padding: 10px; border: 1px solid #7E7E7E;">
+				<form role="form">
+					<div class="str-name">
+						<div class="form-group form-inline">
+							<label for="exampleInputStrname">策略名称</label>
+							<input type="strname" class="form-control" id="exampleInputStrname" placeholder="输入策略名称" style="margin-left: 5px;">
+						</div>
+					</div>
+					<div class="parameters" style="padding-top: 10px;">
+						<form role="form" class="form-inline">
+							<div class="form-group form-inline">
+								<label for="benchmarkMenu">基准收益</label>
+								<select class="form-control" style="margin-left: 5px;">
+									<option>沪深300指数</option>
+									<option>上证50指数</option>
+									<option>中证500指数</option>
+								</select>
+								<label for="slippage" style="margin-left: 50px;">股票交易滑点</label>
+								<div class="input-group">
+									<input type="number" class="form-control" placeholder="输入百分比" aria-describedby="slippage" style="margin-left: 5px;">
+									<span class="input-group-text" id="slippage">%</span>
+								</div>
+							</div>
+							<div class="form-group form-inline">
+								<label for="vollimit-day">日级最大成交比例</label>
+								<div class="input-group">
+									<input type="number" class="form-control" placeholder="输入百分比" aria-describedby="vollimit-day" style="width: 120px; margin-left: 5px;">
+									<span class="input-group-text" id="vollimit-day">%</span>
+								</div>
+								<label for="vollimit-min" style="margin-left: 40px;">分钟级最大成交比例</label>
+								<div class="input-group">
+									<input type="number" class="form-control" placeholder="输入百分比" aria-describedby="vollimit-min" style="width: 120px; margin-left: 5px;">
+									<span class="input-group-text" id="vollimit-min">%</span>
+								</div>
+							</div>
+							<div class="form-group form-inline">
+								<label for="stock-choices">策略中的股票</label>
+								<form>
+									<textarea class="form-control" rows="3" placeholder="请输入股票代码和权重，以逗号隔开" style="margin-left: 5px;margin-top: 5px; width: 100%;"></textarea>
+								</form>
+							</div>
+							<div class="form-group form-inline">
+								<label>输入开始时间</label>
+								<input type="date" class="form-control" style="margin-left: 5px;" aria-describedby="starttime">
+								<label style="margin-left: 30px;">输入结束时间</label>
+								<input type="date" class="form-control" style="margin-left: 5px;" aria-describedby="endtime">
+							</div>
+							<div class="form-group form-inline">
+								<label>设置初始资金</label>
+								<input type="number" class="form-control" placeholder="输入初始资金量" aria-describedby="money" style="margin-left: 5px;">
+								<span class="input-group-text" id="money">¥</span>
+								<label for="frequency" style="margin-left: 30px;">运行频率</label>
+								<select class="form-control" style="margin-left: 5px;">
+									<option>每日</option>
+									<option>每分钟</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<button type="submit" class="btn btn-info">提交</button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -184,14 +155,13 @@
                 <div class="col-12">
                     <div class="call-to-action-wrap">
                         <div class="call-to-action-title">
-                            <!--<div class="text-center"><a href="#" class="btn btn-primary main-btn">Download Apps </a></div>-->
                             <h3>有任何建议或意见，欢迎随时联系我们。感谢您帮助我们完善LEMONQUANT平台。<br/>联系邮箱：xxxxx@163.com</h3>
 						</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+</section>
 	
 	<!--=== footer ===-->
     <footer class="footer">
@@ -232,10 +202,11 @@
     </div>
 	
 	<!--============ JavaScript ===========-->
-    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+<!--    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>-->
     <script src="assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/plugins/slick/slick.min.js"></script>
     <script src="assets/js/app.js"></script>
+
 </body>
 </html>
