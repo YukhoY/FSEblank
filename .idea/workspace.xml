@@ -2,766 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="968080d7-46f8-4f63-96ce-0c8c17bc97c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/charts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/charts/bar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/css/github-markdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Afghanistan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Albania.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Algeria.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Andorra.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Angola.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Anguilla.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Antigua_and_Barbuda.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Argentina.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Armenia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Australia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Austria.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Azerbaijan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bahrain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bangladesh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Barbados.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Belarus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Belgium.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Belize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Benin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bermuda.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bhutan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bolivia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bosnia_and_Herzegovina.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Botswana.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Brazil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/British_Indian_Ocean_Territory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/British_Virgin_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Brunei.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Bulgaria.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Burkina_Faso.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Burundi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cambodia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cameroon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Canada.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cape_Verde.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cayman_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Central_African_Republic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Chad.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Chile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Colombia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Comoros.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Congo-Brazzaville.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Congo-Kinshasa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cook_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Coral_Sea_Islands_Territory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Costa_Rica.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Croatia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cuba.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Cyprus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Czechia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Denmark.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Djibouti.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Dominica.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Dominican_Republic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/East_Timor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Ecuador.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Egypt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/El_Salvador.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Equatorial_Guinea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Eritrea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Estonia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Ethiopia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Falkland_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Faroe_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Federated_States_of_Micronesia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Fiji.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Finland.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/France.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Gabon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Georgia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Germany.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Ghana.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Gibraltar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Greece.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Greenland.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Guatemala.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Guernsey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Guinea-Bissau.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Guinea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Guyana.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Haiti.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Honduras.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Hungary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Iceland.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/India.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Indonesia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Iraq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Ireland.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Islamic_Republic_of_Iran.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Isle_of_Man.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Israel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Italy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Jamaica.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Japan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Jersey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Jordan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Juguang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Kazakhstan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Kenya.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Kiribati.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Kuwait.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Kyrgyzstan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Laos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Latvia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Lebanon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Lesotho.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Liberia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Libya.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Liechtenstein.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Lithuania.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Luxemburg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Macedonia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Madagascar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Malawi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Malaysia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Maldives.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Mali.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Malta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Marshall_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Mauritania.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Mauritius.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Mexico.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Moldova.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Monaco.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Mongolia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Montenegro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Montserrat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Morocco.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Mozambique.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Myanmar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Namibia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Nepal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/New_Zealand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Nicaragua.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Niger.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Nigeria.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Niue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/North_Korea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Norway.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Oman.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Pakistan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Palau.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Palestine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Panama.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Papua_New_Guinea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Paraguay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Peru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Philippines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Pitcairn_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Poland.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Portugal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Qatar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Republic_of_Kosovo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Romania.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Russia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Russian_Federation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Rwanda.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Sahrawi_Arab_Democratic_Republic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Saint_Helena_Ascension_and_Tristan_da_Cunha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Saint_Kitts_and_Nevis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Saint_Lucia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Saint_Vincent_and_the_Grenadines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Samoa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/San_Marino.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Saudi_Arabia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Senegal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Serbia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Seychelles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Sierra_Leone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Singapore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Slovakia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Slovenia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Solomon_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Somalia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/South_Africa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/South_Georgia_and_the_South_Sandwich_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/South_Korea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/South_Sudan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Spain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Sri_Lanka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Sudan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Suriname.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Swaziland.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Sweden.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Syria.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Tajikistan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Tanzania.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Thailand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/The_Bahamas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/The_Gambia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/The_Netherlands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Togo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Tokelau.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Tonga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Trinidad_and_Tobago.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Tunisia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Turkey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Turkmenistan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Turks_and_Caicos_Islands.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Tuvalu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/USA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Uganda.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Ukraine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/United_Arab_Emirates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/United_Kingdom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Uruguay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Uzbekistan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Vanuatu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Vatican_City.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Venezuela.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Vietnam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Yemen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Zambia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/Zimbabwe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_an1_qing4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_bang4_bu4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_bo2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_chi2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_chu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_fu4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_he2_fei2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_huai2_bei3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_huai2_nan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_huang2_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_liu4_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_ma3_an1_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_su4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_tong2_ling2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_wu2_hu2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/an1_hui1_xuan1_cheng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/anhui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/aomen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/beijing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/china.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/chongqing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/echarts-gl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/echarts-liquidfill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/echarts-wordcloud.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_fu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_fu3_tian2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_long2_yan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_nan2_ping2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_ning2_de2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_quan2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_san1_ming2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_sha4_men2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fu2_jian4_zhang1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/fujian.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_bai2_yin2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_ding4_xi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_gan1_nan2_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_jia1_yu4_guan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_jin1_chang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_jiu3_quan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_lan2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_lin2_xia4_hui2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_long3_nan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_ping2_liang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_qing4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_tian1_shui3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_wu3_wei1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gan1_su4_zhang1_ye4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gansu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_chao2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_dong1_guan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_dong1_sha1_qun2_dao3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_fo2_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_guang3_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_he2_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_hui4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_jiang1_men2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_jie1_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_mao4_ming2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_mei2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_qing1_yuan3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_shan4_tou2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_shan4_wei3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_shao2_guan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_shen1_zhen4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_yang2_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_yun2_fu2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_zhan4_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_zhao4_qing4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_zhong1_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_dong1_zhu1_hai3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_bai3_se4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_bei3_hai3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_chong2_zuo3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_fang2_cheng2_gang3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_gui4_gang3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_gui4_lin2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_he2_chi2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_he4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_lai2_bin1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_liu3_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_nan2_ning2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_qin1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_wu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guang3_xi1_yu4_lin2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guangdong.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guangxi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_an1_shun4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_bi4_jie2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_gui4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_liu4_pan2_shui3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_qian2_dong1_nan2_miao2_zu2_tong1_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_qian2_nan2_bu4_yi1_zu2_miao2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_qian2_xi1_nan2_bu4_yi1_zu2_miao2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_tong2_ren2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/gui4_zhou1_zun1_yi4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/guizhou.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_bai2_sha1_li2_zu2_zi4_zhi4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_bao3_ting2_li2_zu2_miao2_zu2_zi4_zhi4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_chang1_jiang1_li2_zu2_zi4_zhi4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_cheng2_mai4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_dan1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_ding4_an1_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_dong1_fang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_hai3_kou3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_le4_dong1_li2_zu2_zi4_zhi4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_lin2_gao1_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_ling2_shui3_li2_zu2_zi4_zhi4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_qiong2_hai3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_qiong2_zhong1_li2_zu2_miao2_zu2_zi4_zhi4_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_san1_sha1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_san1_ya4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_tun2_chang1_xian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_wan4_ning2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_wen2_chang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hai3_nan2_wu3_zhi3_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hainan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_bao3_ding4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_cheng2_de2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_han2_dan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_heng2_shui3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_lang2_fang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_qin2_huang2_dao3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_shi2_jia1_zhuang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_tang2_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_xing2_tai2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_bei3_zhang1_jia1_kou3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_an1_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_he4_bi4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_ji4_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_jiao1_zuo4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_kai1_feng1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_luo4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_nan2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_ping2_ding3_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_pu2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_san1_men2_xia2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_shang1_qiu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_ta4_he2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_xin1_xiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_xin4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_xu3_chang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_zheng4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_zhou1_kou3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/he2_nan2_zhu4_ma3_dian4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hebei.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_da4_qing4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_da4_xing1_an1_ling2_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_ha1_er3_bin1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_he4_gang3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_hei1_he2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_ji1_xi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_jia1_mu4_si1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_mu3_dan1_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_qi1_tai2_he2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_qi2_qi2_ha1_er3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_shuang1_ya1_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_sui1_hua4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hei1_long2_jiang1_yi1_chun1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/heilongjiang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/henan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_e4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_en1_shi1_tu3_jia1_zu2_miao2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_huang2_gang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_huang2_shi2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_jing1_men2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_jing1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_qian2_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_shen2_nong2_jia4_lin2_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_shi2_yan4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_sui2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_tian1_men2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_wu3_han4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_xian1_tao2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_xian2_ning2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_xiang1_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_xiao4_gan3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_bei3_yi2_chang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_chang2_de2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_chang2_sha1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_chen1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_heng2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_huai2_hua4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_lou2_di3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_shao4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_xiang1_tan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_xiang1_xi1_tu3_jia1_zu2_miao2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_yi4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_yong3_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_yue4_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_zhang1_jia1_jie4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hu2_nan2_zhu1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hubei.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/hunan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_bai2_cheng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_bai2_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_chang2_chun1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_ji2_lin2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_liao2_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_si4_ping2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_song1_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_tong1_hua4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ji2_lin2_yan2_bian1_zhao1_xian1_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_chang2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_huai2_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_lian2_yun2_gang3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_nan2_jing1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_nan2_tong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_su1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_su4_qian1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_tai4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_wu2_xi2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_xu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_yan2_cheng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_yang2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_su1_zhen4_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_fu3_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_gan4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_ji2_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_jing3_de2_zhen4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_jiu3_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_nan2_chang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_ping2_xiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_shang4_rao2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_xin1_yu2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_yi2_chun1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiang1_xi1_ying1_tan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiangsu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jiangxi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/jilin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_an1_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_ben3_xi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_da4_lian2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_dan1_dong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_fu3_shun4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_fu4_xin1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_hu2_lu2_dao3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_jin3_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_liao2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_pan2_jin3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_shen3_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_tie3_ling2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_ying2_kou3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liao2_ning2_zhao1_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/liaoning.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_a1_la1_shan4_meng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_ba1_yan4_nao4_er3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_bao1_tou2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_chi4_feng1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_e4_er3_duo1_si1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_hu1_he2_hao4_te4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_hu1_lun2_bei4_er3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_tong1_liao2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_wu1_hai3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_wu1_lan2_cha2_bu4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_xi2_lin2_guo1_le4_meng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/nei4_meng2_gu3_xing1_an1_meng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/neimenggu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ning2_xia4_gu4_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ning2_xia4_shi2_zui3_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ning2_xia4_wu2_zhong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ning2_xia4_yin2_chuan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ning2_xia4_zhong1_wei4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/ningxia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_guo3_luo4_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_hai3_bei3_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_hai3_dong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_hai3_nan2_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_hai3_xi1_meng2_gu3_zu2_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_huang2_nan2_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_xi1_ning2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qing1_hai3_yu4_shu4_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/qinghai.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/registry.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_bin1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_de2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_dong1_ying2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_he2_ze2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_ji4_nan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_ji4_ning2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_lai2_wu2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_liao2_cheng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_lin2_yi2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_qing1_dao3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_ri4_zhao4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_tai4_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_wei1_hai3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_wei2_fang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_yan1_tai2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_zao3_zhuang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_dong1_zi1_bo2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_chang2_zhi4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_da4_tong2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_jin4_cheng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_jin4_zhong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_lin2_fen2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_lv3_liang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_shuo4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_tai4_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_xin1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_yang2_quan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan1_xi1_yun4_cheng2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_an1_kang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_bao3_ji1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_han4_zhong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_shang1_luo4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_tong2_chuan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_wei4_nan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_xi1_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_xian2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_yan2_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shan3_xi1_yu2_lin2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shandong.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shanghai.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shanxi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/shanxi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_a1_ba4_cang2_zu2_qiang1_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_ba1_zhong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_cheng2_du1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_da2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_de2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_gan1_zi1_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_guang3_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_guang3_yuan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_le4_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_liang2_shan1_yi2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_lu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_mei2_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_mian2_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_nan2_chong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_nei4_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_pan1_zhi1_hua1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_sui4_ning2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_ya3_an1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_yi2_bin1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_zi1_yang2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/si4_chuan1_zi4_gong4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/sichuan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/taiwan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/tianjin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/world.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_a1_li3_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_chang1_du1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_la1_sa4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_lin2_zhi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_na4_qu1_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_ri4_ka1_ze2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xi1_cang2_shan1_nan2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xianggang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_a1_ke4_su1_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_a1_la1_er3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_a1_le4_tai4_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ba1_yin1_guo1_leng2_meng2_gu3_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_bei3_tun2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_bo2_er3_ta3_la1_meng2_gu3_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_chang1_ji2_hui2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ha1_mi4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_he2_tian2_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ka1_shi2_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ke3_ke4_da2_la1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ke4_la1_ma3_yi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ke4_zi1_le4_su1_ke1_er3_ke4_zi1_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_kun1_yu4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_shi2_he2_zi3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_shuang1_he2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_ta3_cheng2_di4_qu1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_tie3_men2_guan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_tu2_mu4_shu1_ke4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_tu3_lu3_fan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_wu1_lu3_mu4_qi2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_wu3_jia1_qu2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xin1_jiang1_yi1_li2_ha1_sa4_ke4_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xinjiang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/xizang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_bao3_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_chu3_xiong2_yi2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_da4_li3_bai2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_de2_hong2_dai3_zu2_jing3_po3_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_di2_qing4_cang2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_hong2_he2_ha1_ni2_zu2_yi2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_kun1_ming2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_li4_jiang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_lin2_cang1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_nu4_jiang1_li4_su4_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_pu3_er3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_qu1_jing4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_wen2_shan1_zhuang4_zu2_miao2_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_xi1_shuang1_ban3_na4_dai3_zu2_zi4_zhi4_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_yu4_xi1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yun2_nan2_zhao1_tong1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/yunnan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_hang2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_hu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_jia1_xing1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_jin1_hua2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_li4_shui3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_ning2_bo1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_qu2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_shao4_xing1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_tai2_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_wen1_zhou1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhe4_jiang1_zhou1_shan1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/echarts/zhejiang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/images/fav.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/MyStrategy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/market.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/strategy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/ionicons.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/ionicons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/news.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/news.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/pagination-bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/pagination-bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/ionicons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/app1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/app1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/app2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/app2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/app3.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/app3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/background/background_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/background/background_01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/background/background_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/background/background_01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/background/background_02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/background/background_02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/background/background_03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/background/background_03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/background/background_04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/background/background_04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/byulogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/byulogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/clevelandfire.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/clevelandfire.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/dashed-line.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/dashed-line.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/dlink-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/dlink-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/iop.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/iop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/logoTxt.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/logoTxt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/logo_unitn.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/logo_unitn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/microsoft.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/microsoft.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/nba.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/nba.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/nvidia-logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/nvidia-logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/scsba-header-brand.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/scsba-header-brand.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/uanl.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/uanl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/ucla.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/ucla.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/uflogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/uflogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/um-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/um-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/upenn-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/upenn-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/y-plan-logo-small.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/y-plan-logo-small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/clients/yale_University_logo.svg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/clients/yale_University_logo.svg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/logo/intro-section.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/logo/intro-section.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/logo/slide-home3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/logo/slide-home3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_Devices_e67q.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_Devices_e67q.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_Internet_on_the_go_5xx0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_Internet_on_the_go_5xx0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_JavaScript_Frameworks_x21l.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_JavaScript_Frameworks_x21l.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_blog_anyj.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_blog_anyj.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_browser_stats_704t.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_browser_stats_704t.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_checklist_7q37.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_checklist_7q37.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_connected_8wvi.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_connected_8wvi.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_contrast_vb82.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_contrast_vb82.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_create_f05x.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_create_f05x.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_destanation1_h3vq.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_destanation1_h3vq.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_files1_9ool.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_files1_9ool.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_files_6b3d.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_files_6b3d.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_filter_4kje.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_filter_4kje.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_folder_x4ft.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_folder_x4ft.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_hello_aeia.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_hello_aeia.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_images_aef7.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_images_aef7.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_job_hunt_byf9.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_job_hunt_byf9.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_map_light_6ttm.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_map_light_6ttm.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_opened_gi4n.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_opened_gi4n.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_profile_pic_ic5t.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_profile_pic_ic5t.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_responsive_6c8s.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_responsive_6c8s.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_resume_1hqp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_resume_1hqp.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_resume_folder_2_arse.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_resume_folder_2_arse.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_safe_bnk7.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_safe_bnk7.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_segment_uwu1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_segment_uwu1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_sync4_xlc6.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_sync4_xlc6.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_typing_jie3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_typing_jie3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_windows_q9m0.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_windows_q9m0.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/svg/undraw_working2_ce2b.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/svg/undraw_working2_ce2b.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/team_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/team_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/team_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/team_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/team_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/team_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/thumb/blog-item_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/thumb/blog-item_01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/thumb/blog-item_02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/thumb/blog-item_02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/thumb/blog-item_03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/thumb/blog-item_03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/thumb/blog-item_04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/thumb/blog-item_04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/thumb/blog-thumb_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/images/thumb/blog-thumb_01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/jquery-3.2.1.slim.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery-3.2.1.slim.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/js/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/ajax-loader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/config.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/config.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/fonts/slick.eot" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/fonts/slick.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/fonts/slick.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/fonts/slick.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/fonts/slick.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/fonts/slick.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/fonts/slick.woff" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/fonts/slick.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick-theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick-theme.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick-theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick-theme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick.less" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/plugins/slick/slick.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/assets/plugins/slick/slick.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/MyStrategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/MyStrategy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/market.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fseblank网页/strategy.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/fseblank网页/strategy.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -769,22 +10,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/FSEblank$manage.coverage" NAME="manage Coverage Results" MODIFIED="1558968740693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="76">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="323">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -795,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="171">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -807,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1157">
-              <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+            <state relative-caret-position="760">
+              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -816,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/market.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3509">
+            <state relative-caret-position="95">
               <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
             </state>
           </provider>
@@ -825,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/MyStrategy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="3211">
               <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
             </state>
           </provider>
@@ -834,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/strategy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
+            <state relative-caret-position="4028">
+              <caret line="212" selection-start-line="212" selection-end-line="212" />
             </state>
           </provider>
         </entry>
@@ -843,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="114" column="80" lean-forward="true" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
+            <state relative-caret-position="2166">
+              <caret line="114" column="80" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -852,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="40" column="87" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="40" selection-end-column="87" />
+            <state relative-caret-position="760">
+              <caret line="40" column="87" selection-start-line="35" selection-start-column="19" selection-end-line="40" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -861,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="277" column="91" lean-forward="true" selection-start-line="272" selection-start-column="24" selection-end-line="277" selection-end-column="91" />
+            <state relative-caret-position="304">
+              <caret line="16" column="97" lean-forward="true" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -895,9 +139,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="66" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="157" />
+    <option name="y" value="34" />
     <option name="width" value="1728" />
     <option name="height" value="913" />
   </component>
@@ -925,50 +169,6 @@
               <item name="FSEblank" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FSEblank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FSEblank" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FSEblank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FSEblank" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-4.0.0-beta.3-dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FSEblank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FSEblank" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-4.0.0-beta.3-dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FSEblank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FSEblank" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-4.0.0-beta.3-dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap.bundle.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="FSEblank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FSEblank" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap-4.0.0-beta.3-dist" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="FSEblank" type="b2602c69:ProjectViewProjectNode" />
@@ -1075,32 +275,33 @@
       <workItem from="1558665626755" duration="160000" />
       <workItem from="1558953843071" duration="3556000" />
       <workItem from="1558958405114" duration="5537000" />
+      <workItem from="1558968138807" duration="2974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9434000" />
+    <option name="totallyTimeSpent" value="12408000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="128" y="80" width="1382" height="730" extended-state="0" />
+    <frame x="188" y="73" width="1728" height="913" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22885196" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23141487" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292978" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31270903" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31193838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32991013" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32991013" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1119,19 +320,11 @@
     <SUITE FILE_PATH="coverage/FSEblank$manage.coverage" NAME="manage Coverage Results" MODIFIED="1558964993547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/images/app1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/images/app1.png" />
     <entry file="file://$PROJECT_DIR$/app/fseblank网页/strategy.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/js/app.js" />
     <entry file="file://$PROJECT_DIR$/app/fseblank网页/signup.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1149,18 +342,9 @@
     <entry file="file://$PROJECT_DIR$/app/charts/bar.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8160" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/css/app.css" />
+    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.css.map" />
+    <entry file="file://$PROJECT_DIR$/../pyecharts-app/app/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/app/fseblank网页/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1168,23 +352,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/500.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/500.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/404.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1193,9 +363,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/market.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/MyStrategy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3211">
+          <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/strategy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4028">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2166">
+          <caret line="114" column="80" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="87" selection-start-line="35" selection-start-column="19" selection-end-line="40" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="97" lean-forward="true" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="171">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -1203,69 +429,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1157">
-          <caret line="40" column="54" lean-forward="true" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/market.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3509">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="277" column="91" lean-forward="true" selection-start-line="272" selection-start-column="24" selection-end-line="277" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/MyStrategy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="40" column="87" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="40" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="114" column="80" lean-forward="true" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/strategy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="323">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
