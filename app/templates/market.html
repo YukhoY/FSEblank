@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -64,7 +64,16 @@
             </div>
         </div>
     </section>
-	
+
+
+	{% for jsfile_name in script_list %}
+        <script src="../static/echarts/{{ jsfile_name }}.js"></script>
+    {% endfor %}
+	<div class="my-charts">
+        {{ myechart|safe }}
+    </div>
+
+
 	<!--=== 行情搜索栏 ===-->
 	<div class="container-fluid">
 		<div class="row">
@@ -76,13 +85,21 @@
 					<option value="2">种类三</option>
 				</select>
 			</div>
-			<div class="col-8" style="padding: 10px 0 10px 0;">
-				<input type="text" class="search" placeholder="搜索">
-				<input type="button" name="" id="" class="btn">
-			</div>
+
+			<form action="/market.html" method="post">
+				<legend>输入股票信息</legend>
+				<p><input name="code" placeholder="<股票名称>-<股票代码> eg.上证指数-sz ps:其实名称可以随便写" value="{{ code }}"></p>
+				<p><input name="startdate" placeholder="开始日期: xxxx/xx/xx" value="{{ startdate }}"></p>
+				<p><input name="enddate" placeholder="结束日期: xxxx/xx/xx" value="{{ enddate }}"></p>
+				<p><input name="interval" placeholder="时间间隔: D|M|W|5|15|30|60" value="{{ interval }}"></p>
+				<p><button type="submit">GO! </button></p>
+
+			</form>
+
 		</div>
 	</div>
-	
+
+
 	<!--=== 行情列表 ===-->
 	<div class="container-fluid">
 		<div class="row">
@@ -103,6 +120,7 @@
 			</div>
 			<div class="col-2 text-info" style="padding: 10px;">
 				<a href="#">中小板</a>
+
 			</div>
 			<div class="table-responsive">
 				<table class="table table-hover" style="font-size: 10px;">
@@ -176,6 +194,7 @@
 			</div>
 		</div>
 	</div>
+
 	
 	<!--===页脚===-->
 	<section id="action" class="call-to-action-2">

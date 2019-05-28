@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template,request
 import app.charts as charts
 
 from . import app
@@ -8,6 +8,44 @@ from . import app
 def hello():
     return render_template("index.html")
 #title='首页'
+
+@app.route('/market.html')
+def first_meet():
+    #默认沪深信息
+    hs = charts.bar.create_hs()#return page
+    print("股票样例")
+    return render_template('market.html',
+                           myechart=hs.render_embed(),
+                           script_list=hs.js_dependencies.items)
+
+
+@app.route('/market.html', methods=['POST'])
+def draw():
+    code=[]
+    code.append(request.form['code']+'-'+"Kline")
+    print(code)
+    mode_combo = 'KLine'
+    startdate = request.form['startdate']
+    print(startdate)
+    enddate = request.form['enddate']
+    print(enddate)
+    optInterval = request.form['interval']
+    print(optInterval)
+    width1 = 0
+    length1 = 0
+    #以上内容要做正则性判断
+    ok=1
+    if ok==1:
+        chart=charts.bar.stock_draw(code,mode_combo,startdate,enddate,optInterval,width1,length1)
+        return render_template('market.html',
+                               myechart=chart.render_embed(),
+                              script_list=chart.js_dependencies.items)
+    else:
+        pass
+        #return render_template() 返回错误页面提示信息
+
+
+
 
 '''
 @app.route('/bar')
@@ -23,13 +61,13 @@ def bar():
 
 '''
 
-
+'''
 @app.route('/market.html')
 def bar3d():
 
     return render_template('market.html')
 
-'''
+
 @app.route('/boxplot')
 def boxplot():
     _boxplot = charts.boxplot.create_charts()
