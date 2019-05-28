@@ -1,5 +1,5 @@
 #CSRF_ENABLED = True
-#SECRET_KEY = 'zenmeyecaibudaodekey'
+SECRET_KEY = 'zenmeyecaibudaodekey'
 
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))

@@ -1,3 +1,4 @@
+#coding: utf8
 from flask import render_template, flash, redirect, session, url_for, request, g
 import app.charts as charts
 from flask_login import login_user, logout_user, current_user, login_required
@@ -9,6 +10,10 @@ from . import app, db, lm
 def load_user(id):
     return User.query.get(int(id))
 
+@app.before_request
+def before_request():
+    g.user = current_user
+
 @app.route("/")
 @app.route("/index")
 @app.route("/index.html")
@@ -19,10 +24,13 @@ def index():
 @app.route("/login", methods=['GET', 'POST'])
 @app.route("/login.html", methods=['GET', 'POST'])
 def login():
-    if g.user is not None and g.user.is_authenticated():
+    if g.user is not None and g.user.is_authenticated:
         return redirect(url_for('index'))
     form = LoginForm(request.form)
     print(form)
+    print(form.username.data,form.password.data)
+    print(request.form.get('username'))
+    print(request.form.get('password'))
     if form.validate_on_submit():
         return render_template('index.html')
     return render_template('login.html')
@@ -55,6 +63,11 @@ def news():
 def MyStrategy():
     if request.method == 'GET':
         return render_template('MyStrategy.html')
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 #title='首页'
 
 '''
