@@ -71,6 +71,7 @@
             <div class="highlight-section-tag col-md-12" style="font-family: 'MF ShangYa (Noncommercial)'"  text-shadow="0 0 10px"><h3> LOGIN</h3> </div>
             <div class="col-md-12" id="login">
                 <form action="/login" method="post">
+                    {{form.hidden_tag()}}
                     <input class="logininput" type="text" required="required" placeholder="用户名" name="username">
                     </input>
 				<br /><br /><br />
@@ -80,6 +81,17 @@
 			<button class="btn btn-primary main-btn bg-main" type="submit">登录</button>
 			<br /><br />
                 </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul class="flash">
+                            {% for message in messages %}
+                                <div class="alert alert-success" style="text-align: center">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <strong>{{ message }}</strong></div>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
 			<a href="signup.html" style="color:aliceblue"><u>还没有账号？立即注册</u></a>
             </div>
         </div>

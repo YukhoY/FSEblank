@@ -24,6 +24,8 @@ def index():
 @app.route("/login", methods=['GET', 'POST'])
 @app.route("/login.html", methods=['GET', 'POST'])
 def login():
+    if g.user is None:
+        return render_template('login.html')
     if g.user is not None and g.user.is_authenticated:
         print('已经登陆')
         return redirect(url_for('index'))
@@ -39,12 +41,11 @@ def login():
         if user is None or not user.check_password(form.password.data):
             print('用户名或密码无效')
             flash('无效的用户名或密码')
-            return redirect(url_for('market'))
+            return redirect(url_for('login'))
         print('登陆成功')
         return render_template('index.html')
     print('输入无效')
-    flash('无效')
-    return render_template('login.html')
+    return render_template('login.html', form=LoginForm())
 
 @app.route('/market')
 @app.route('/market.html')
