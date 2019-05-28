@@ -1,8 +1,13 @@
-from flask import render_template,request, redirect
+from flask import render_template, flash, redirect, session, url_for, request, g
 import app.charts as charts
+from flask_login import login_user, logout_user, current_user, login_required
+from .forms import LoginForm
+from .models import User
+from . import app, db, lm
 
-from . import app
-
+@lm.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
 @app.route("/")
 @app.route("/index")
@@ -14,13 +19,13 @@ def index():
 @app.route("/login", methods=['GET', 'POST'])
 @app.route("/login.html", methods=['GET', 'POST'])
 def login():
-    if request.method == 'GET':
-        return render_template('login.html')
-    else:
-        username = request.form.get('u')
-        password = request.form.get('p')
-        print('username: {}, password: {}'.format(username, password))
-        return redirect('index')
+    if g.user is not None and g.user.is_authenticated():
+        return redirect(url_for('index'))
+    form = LoginForm(request.form)
+    print(form)
+    if form.validate_on_submit():
+        return render_template('index.html')
+    return render_template('login.html')
 
 @app.route('/market')
 @app.route('/market.html')
