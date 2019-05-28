@@ -1,4 +1,4 @@
-#CSRF_ENABLED = True
+CSRF_ENABLED = True
 SECRET_KEY = 'zenmeyecaibudaodekey'
 
 import os

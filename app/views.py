@@ -25,14 +25,25 @@ def index():
 @app.route("/login.html", methods=['GET', 'POST'])
 def login():
     if g.user is not None and g.user.is_authenticated:
+        print('已经登陆')
         return redirect(url_for('index'))
-    form = LoginForm(request.form)
-    print(form)
-    print(form.username.data,form.password.data)
-    print(request.form.get('username'))
-    print(request.form.get('password'))
+    form = LoginForm()
+    print('收到表格')
+    print(form.username.data, form.password.data)
+    print(form.validate_on_submit())
     if form.validate_on_submit():
+        print('判断了有输入')
+        print(form.username.data, form.password.data)
+        user = User.query.filter_by(username=form.username.data).first()
+        print('获取user信息')
+        if user is None or not user.check_password(form.password.data):
+            print('用户名或密码无效')
+            flash('无效的用户名或密码')
+            return redirect(url_for('market'))
+        print('登陆成功')
         return render_template('index.html')
+    print('输入无效')
+    flash('无效')
     return render_template('login.html')
 
 @app.route('/market')
