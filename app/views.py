@@ -1,12 +1,55 @@
-from flask import render_template
+from flask import render_template,request, redirect
 import app.charts as charts
 
 from . import app
 
 
 @app.route("/")
-def hello():
+@app.route("/index")
+@app.route("/index.html")
+def index():
     return render_template("index.html")
+
+
+@app.route("/login", methods=['GET', 'POST'])
+@app.route("/login.html", methods=['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+    else:
+        username = request.form.get('u')
+        password = request.form.get('p')
+        print('username: {}, password: {}'.format(username, password))
+        return redirect('index')
+
+@app.route('/market')
+@app.route('/market.html')
+def market():
+    return render_template('market.html')
+
+@app.route("/strategy", methods=['GET', 'POST'])
+@app.route("/strategy.html", methods=['GET', 'POST'])
+def strategy():
+    if request.method == 'GET':
+        return render_template('strategy.html')
+
+@app.route("/signup", methods=['GET', 'POST'])
+@app.route("/signup.html", methods=['GET', 'POST'])
+def signup():
+    if request.method == 'GET':
+        return render_template('signup.html')
+
+@app.route("/news", methods=['GET', 'POST'])
+@app.route("/news.html", methods=['GET', 'POST'])
+def news():
+    if request.method == 'GET':
+        return render_template('news.html')
+
+@app.route("/MyStrategy", methods=['GET', 'POST'])
+@app.route("/MyStrategy.html", methods=['GET', 'POST'])
+def MyStrategy():
+    if request.method == 'GET':
+        return render_template('MyStrategy.html')
 #title='首页'
 
 '''
@@ -24,10 +67,6 @@ def bar():
 '''
 
 
-@app.route('/market.html')
-def bar3d():
-
-    return render_template('market.html')
 
 '''
 @app.route('/boxplot')
