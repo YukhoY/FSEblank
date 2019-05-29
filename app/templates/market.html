@@ -1,6 +1,10 @@
 
 {% extends 'base.html' %}
+
 {% block content %}
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.staticfile.org/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
 	<!--=== page header ===-->
     <section class="page-header d-flex align-items-center">
         <div class="container-fluid">
@@ -13,7 +17,98 @@
 
 	<!--=== 行情搜索栏 ===-->
 	<!--=== 股票详细信息 ===-->
+<form action="/market.html" method="post">
+	<div class="container-fluid">
+		<div class="row">
+			<!--- 股票列表折叠栏 --->
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" style="padding: 10px;" id="tree well">
+				<div class="panel-group table-responsive" role="tablist">
+					<div class="panel panel-primary leftMenu">
+						<div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab">
+							<!-- 利用data-target指定要折叠的分组列表 -->
+							<h4 class="panel-title">
+								股票1
+								<span class="glyphicon glyphicon-chevron-down right"></span>
+							</h4>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup1" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+							<ul class="list-group">
 
+								<li class="list-group-item">
+									<label for="code">股票代码：</label><input id="code" name="code" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
+								</li>
+								<li class="list-group-item">
+									<label for="startdate">开始日期：</label><input name="startdate" id="startdate" type="date" value="{{ startdate }}"/>
+								</li>
+								<li class="list-group-item">
+                                    <label for="interval">时间间隔：</label>
+                                    <select name="interval" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
+								</li>
+							</ul>
+						</div>
+						<div class="panel panel-primary leftMenu">
+							<div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+								<h4 class="panel-title">
+									股票2
+									<span class="glyphicon glyphicon-chevron-down right"></span>
+								</h4>
+							</div>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup2" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+							<ul class="list-group">
+
+								<li class="list-group-item">
+									<label for="code2">股票代码：</label><input id="code" name="code2" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
+								</li>
+								<li class="list-group-item">
+									<label for="startdate2">开始日期：</label><input name="startdate2" id="startdate" type="date" value="{{ startdate }}"/>
+								</li>
+								<li class="list-group-item">
+                                    <label for="interval2">时间间隔：</label>
+                                    <select name="interval2" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+                <li style="float: left; list-style: none;"><button type="submit">查询GO! </button></li>
+			</div>
+
+			<!--- 图像栏 --->
+			<div class="col-md-9" style="padding: 10px;">
+				<div class="col-md-7 col-md-offset-2">
+					<div class="input-group">
+						<input type="text" class="form-control" onkeydown="onKeyDown(event)" placeholder="请输入股票代码，例：600666" id="stockCodeSearch"/>
+						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+					</div>
+				</div>
+				<div class="my-charts">
+                        {{ myechart|safe }}
+                </div>
+			</div>
+		</div>
+	</div>
+
+    </form>
 
 	<!--=== 行情列表 ===-->
 	<div class="container-fluid">

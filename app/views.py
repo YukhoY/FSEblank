@@ -80,42 +80,46 @@ def logout():
     return redirect(url_for('index'))
 #title='首页'
 
-@app.route('/market.html')
-@login_required
-def first_meet():
-    #默认沪深信息
-    hs = charts.bar.create_hs()#return page
-    return render_template('market.html',
-                           myechart=hs.render_embed(),
-                           script_list=hs.js_dependencies.items,
-                           ug=g.user)
 
 
-@app.route('/market.html', methods=['POST'])
+@app.route('/market.html', methods=['GET', 'POST'])
+@app.route('/market', methods=['GET', 'POST'])
 @login_required
 def draw():
-    code=[]
-    code.append(request.form['code']+'-'+"Kline")
-    print(code)
-    mode_combo = 'KLine'
-    startdate = request.form['startdate']
-    print(startdate)
-    enddate = request.form['enddate']
-    print(enddate)
-    optInterval = request.form['interval']
-    print(optInterval)
-    width1 = 0
-    length1 = 0
-    #以上内容要做正则性判断
-    ok=1
-    if ok==1:
-        chart=charts.bar.stock_draw(code,mode_combo,startdate,enddate,optInterval,width1,length1)
+    if request.method=='GET':
+        hs = charts.bar.create_hs()  # return page
         return render_template('market.html',
-                               myechart=chart.render_embed(),
-                              script_list=chart.js_dependencies.items,
+                               myechart=hs.render_embed(),
+                               script_list=hs.js_dependencies.items,
                                us=g.user)
-    else:
-        pass
+
+    if request.method=='POST':
+
+
+        code=[]
+        if request.form['code']!='':
+            code.append(request.form['code']+'-'+"Kline")
+        if request.form['code2']!='':
+            code.append(request.form['code2']+'-'+"Kline")
+
+        print(code)
+        mode_combo = 'KLine'
+        startdate = request.form['startdate']
+        print(startdate)
+        optInterval = request.form['interval']
+        print(optInterval)
+        width1 = 0
+        length1 = 0
+        #以上内容要做正则性判断
+        ok=1
+        if ok==1:
+            chart=charts.bar.stock_draw(code,mode_combo,startdate,optInterval)
+            return render_template('market.html',
+                                   myechart=chart.render_embed(),
+                                  script_list=chart.js_dependencies.items,
+                                   us=g.user)
+        else:
+            pass
         #return render_template() 返回错误页面提示信息
 
 

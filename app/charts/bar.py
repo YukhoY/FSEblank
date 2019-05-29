@@ -8,12 +8,12 @@ import re
 import time
 from datetime import datetime,timedelta
 
-def stock_draw(labels,mode_combo,startdate,enddate,optInterval,width1, height1):
+def stock_draw(labels,mode_combo,startdate,optInterval,enddate=time.strftime("%Y/%m/%d")):
 
     startdate = startdate.replace("/", "-")  # 将参数日期转换为tushare的日期格式
     enddate = enddate.replace("/", "-")
 
-    page = Page()
+    tl = Timeline(init_opts=opts.InitOpts(width="1100px", height="500px"))
 
 
     for label in labels:  # 对于传入的labels一张张作图
@@ -93,7 +93,7 @@ def stock_draw(labels,mode_combo,startdate,enddate,optInterval,width1, height1):
 
                     kline.overlap(line3)
 
-                page.add(kline)
+                tl.add(kline,label1[0] + "-" + optInterval)
             else:  # label1[2]==open/close/volume
                 if label1[2] == 'Open':
                     list_aft = array['open'].tolist()
@@ -121,16 +121,16 @@ def stock_draw(labels,mode_combo,startdate,enddate,optInterval,width1, height1):
                                                 is_show=True, areastyle_opts=opts.AreaStyleOpts(opacity=1)
                                             ),
                                         ),
-                                        datazoom_opts=[opts.DataZoomOpts(pos_bottom="-2%")],
+                                        datazoom_opts=[opts.DataZoomOpts(pos_top="2%")],
                                         title_opts=opts.TitleOpts(title=label1[0] + "-" + label1[2]))
                         .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
 
                 )
 
 
-                page.add(line)
 
-    return page
+
+    return tl
 
 
 def CalculateMA(date,DayCount):
@@ -146,9 +146,7 @@ def CalculateMA(date,DayCount):
 
 def create_hs():
 
-    #绘制market页面首页的沪深两张图
-
-
+    #绘制market页面首页
     curdate = time.strftime("%Y/%m/%d")  # 注意格式化参数 获取当前时间
     # print(curdate)
 
@@ -181,8 +179,8 @@ def stock_draw_welcome(labels,mode_combo,startdate,enddate,optInterval):
 
     for label in labels:  # 对于传入的labels一张张作图
         label1 = re.split("-", label)
-        print(label1[0])
-        print(label1[1])
+        #print(label1[0])
+        #print(label1[1])
         if mode_combo == "KLine":
             array = ts.get_k_data(label1[1], start=startdate, end=enddate, ktype=optInterval)
 
@@ -210,7 +208,7 @@ def stock_draw_welcome(labels,mode_combo,startdate,enddate,optInterval):
                             is_show=True, areastyle_opts=opts.AreaStyleOpts(opacity=1)
                             ),
                         ),
-                        datazoom_opts=[opts.DataZoomOpts(pos_bottom="-2%")],
+                        datazoom_opts=[opts.DataZoomOpts(pos_top="2%")],
                         title_opts=opts.TitleOpts(title=label1[0] + "-" + optInterval)
 
                     )
