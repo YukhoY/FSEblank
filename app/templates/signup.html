@@ -74,47 +74,36 @@
       <div class="col-md-12" id="login">
         <form action='/signup' method="post">
           {{form.hidden_tag()}}
-          <input class="logininput" type="email" required="required" placeholder="邮箱" name="email">
-          {% for error in form.email.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-          </input>
-          <br />
-          <br />
-          <br />
-          <input class="logininput" type="text" required="required" placeholder="用户名" name="username">
-          {% for error in form.username.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-          </input>
-          <br />
-          <br />
-          <br />
-          <input class="logininput" type="password" required="required" placeholder="密码" name="password">
-          {% for error in form.password.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-          </input>
-          <br />
-          <br />
-          <br />
-          <input class="logininput" type="password" required="required" placeholder="确认密码" name="password2">
-          {% for error in form.password2.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-          </input>
           <p>
-            {{ form.password2.label }}<br>
+            {{ form.username.label(style="color: white; font-size: 20px;") }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red; float: outside">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.email.label(style="color: white; font-size: 20px;")}}<br>
+            {{ form.email(size=32) }}<br>
+            {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+         </p>
+         <p>
+            {{ form.password.label(style="color: white; font-size: 20px;")}}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+         </p>
+         <p>
+            {{ form.password2.label(style="color: white; font-size: 20px;")}}<br>
             {{ form.password2(size=32) }}<br>
             {% for error in form.password2.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-          </p>
+        </p>
           <br />
-          <br />
-          <br />
-          <br />
-          <button class="btn btn-primary main-btn bg-main" type="submit">注册</button>
+          <button class="btn btn-primary main-btn bg-main" type="submit" style="width: 100px; height: 50px; text-align: center; font-size: 30px;padding-top: 0px;">注册</button>
         </form>
       </div>
     </div>

@@ -72,13 +72,22 @@
             <div class="col-md-12" id="login">
                 <form action="/login" method="post">
                     {{form.hidden_tag()}}
-                    <input class="logininput" type="text" required="required" placeholder="用户名" name="username">
-                    </input>
-				<br /><br /><br />
-                    <input class="logininput" type="password" required="required" placeholder="密码" name="password">
-                    </input>
-			<br /><br /><br />
-			<button class="btn btn-primary main-btn bg-main" type="submit">登录</button>
+                    <p>
+                    {{ form.username.label(style="color: white; font-size: 20px;") }}<br>
+                    {{ form.username(size=32) }}<br>
+                    {% for error in form.username.errors %}
+                    <span style="color: red; float: outside">[{{ error }}]</span>
+                    {% endfor %}
+                    </p>
+                    <p>
+                    {{ form.password.label(style="color: white; font-size: 20px;") }}<br>
+                    {{ form.password(size=32) }}<br>
+                    {% for error in form.password.errors %}
+                    <span style="color: red; float: outside">[{{ error }}]</span>
+                    {% endfor %}
+                    </p>
+                    <br/>
+			<button class="btn btn-primary main-btn bg-main" type="submit" style="height: 40px; text-align: center; font-size: 20px;padding-top: 0px;">登录</button>
 			<br /><br />
                 </form>
                 {% with messages = get_flashed_messages() %}
