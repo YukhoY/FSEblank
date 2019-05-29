@@ -18,7 +18,7 @@ def before_request():
 @app.route("/index")
 @app.route("/index.html")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title='index', us=g.user)
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -34,20 +34,20 @@ def login():
             return redirect(url_for('login'))
         login_user(user)
         return redirect(request.args.get('next') or url_for('index'))
-    return render_template('login.html', form=LoginForm())
+    return render_template('login.html', title='login', form=LoginForm(), us=g.user)
 
 @app.route('/market')
 @app.route('/market.html')
 @login_required
 def market():
-    return render_template('market.html')
+    return render_template('market.html', title='market')
 
 @app.route("/strategy", methods=['GET', 'POST'])
 @app.route("/strategy.html", methods=['GET', 'POST'])
 @login_required
 def strategy():
     if request.method == 'GET':
-        return render_template('strategy.html')
+        return render_template('strategy.html', title='strategy', us=g.user)
 
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])
@@ -62,20 +62,20 @@ def signup():
         db.session.commit()
         flash('注册成功!请登录!')
         return redirect(url_for('login'))
-    return render_template('signup.html', form=form)
+    return render_template('signup.html', title='signup', form=form, us=g.user)
 
 @app.route("/news", methods=['GET', 'POST'])
 @app.route("/news.html", methods=['GET', 'POST'])
 def news():
     if request.method == 'GET':
-        return render_template('news.html')
+        return render_template('news.html', title='news', us=g.user)
 
 @app.route("/MyStrategy", methods=['GET', 'POST'])
 @app.route("/MyStrategy.html", methods=['GET', 'POST'])
 @login_required
 def MyStrategy():
     if request.method == 'GET':
-        return render_template('MyStrategy.html')
+        return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
 
 @app.route('/logout')
 def logout():
@@ -329,13 +329,12 @@ def timeline():
 
 
 '''
-'''
+
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("404.html"), 404
+    return render_template("404.html", title='404', us=g.user), 404
 
 
 @app.errorhandler(500)
 def page_not_found(e):
-    return render_template("500.html"), 500
-'''
+    return render_template("500.html", title='404', us=g.user), 500
