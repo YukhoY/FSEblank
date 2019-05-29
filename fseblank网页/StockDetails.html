@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LemonQuant-StockDetails</title>
+	<!--Css Links-->
+<!--
+	<link href="../assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+	<script src="../assets/bootstrap-4.0.0-beta.3-dist/js/bootstrap.min.js"></script>
+-->
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
+	<link href="https://cdn.staticfile.org/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet" type="text/css">
+
+	<link href="../assets/css/app.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/ionicons.css" rel="stylesheet" type="text/css">
+	<link href="../assets/css/responsive.css" rel="stylesheet" type="text/css">
+	<link href="../assets/plugins/slick/slick-theme.css" rel="stylesheet" type="text/css">
+	<link href="../assets/plugins/slick/slick.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:500,500i,600,600i,700,700i,800,800i" rel="stylesheet">	
+	<script src="https://cdn.bootcss.com/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js"></script>
+	<!--=== 新增的库 ===-->
+	<!-- 树形列表treeview -->
+	<script src="https://cdn.staticfile.org/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+	
+	
+</head>
+
+<body>
+	<!--=== navigation ===-->
+	<header id="nav" class="header">
+		<!--menu-->
+		<div class="navbar navbar-expand-md navbar-light default-menu justify-content-between" role="navigation" style="background-color: #3D5C63">
+			<div class="container-fluid">
+				<a href="index.html" class="site-logo navbar-brand" style="color:#FFF010;padding-top: 25px;">LemonQuant</a>
+				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#v" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+				<div class="collapse navbar-collapse col-md-7" id="v" style="width: auto;">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link scroll" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="market.html">Market</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="strategy.html">Strategy</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="#testimonial">Community</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="#blog">News</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="login.html">Personal</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="dropdown nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-search-strong"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right list-search">
+                                <li class="dropdown-item">
+                                    <form class="navbar-left nav-search" role="search">
+                                        <div class="form-inline">
+                                            <input class="form-control" placeholder="Search..." type="text">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#popup"><i class="ion ion-navicon"></i></a></li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</header>
+	
+	<!--=== page header ===-->
+    <section class="page-header d-flex align-items-center" style="margin-top: -20px;">
+        <div class="container-fluid">
+            <div class="page-header-content text-center">
+                <!--<div class="page-header-tag">Post Detail</div>-->
+                <div class="page-header-title" style="font-family: 'MF ShangYa (Noncommercial)'">股票详情信息</div>
+            </div>
+        </div>
+    </section>
+	
+	<!--=== 股票详细信息 ===-->
+	<div class="container-fluid">
+		<div class="row">
+			<!--- 股票列表折叠栏 --->
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" style="padding: 10px;" id="tree well">
+				<div class="panel-group table-responsive" role="tablist">
+					<div class="panel panel-primary leftMenu">
+						<div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab">
+							<!-- 利用data-target指定要折叠的分组列表 -->
+							<h4 class="panel-title">
+								沪深A股
+								<span class="glyphicon glyphicon-chevron-down right"></span>
+							</h4>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup1" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<!-- 利用data-target指定URL -->
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-1
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-2
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-3
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-4
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="panel panel-primary leftMenu">
+							<div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+								<h4 class="panel-title">
+									上证A股
+									<span class="glyphicon glyphicon-chevron-down right"></span>
+								</h4>
+							</div>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup2" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<!-- 利用data-target指定URL -->
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项2-1
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项2-2
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项2-3
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="panel panel-primary leftMenu">
+							<div class="panel-heading" id="collapseListGroupHeading3" data-toggle="collapse" data-target="#collapseListGroup3" role="tab" >
+								<h4 class="panel-title">
+									深证A股
+									<span class="glyphicon glyphicon-chevron-down right"></span>
+								</h4>
+							</div>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup3" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading3">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<!-- 利用data-target指定URL -->
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-1
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-2
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-3
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="panel panel-primary leftMenu">
+							<div class="panel-heading" id="collapseListGroupHeading4" data-toggle="collapse" data-target="#collapseListGroup4" role="tab" >
+								<h4 class="panel-title">
+									创业板
+									<span class="glyphicon glyphicon-chevron-down right"></span>
+								</h4>
+							</div>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup4" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading4">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<!-- 利用data-target指定URL -->
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-1
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-2
+									</button>
+								</li>
+								<li class="list-group-item">
+									<button class="menu-item-left">
+										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-3
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--- 图像栏 --->
+			<div class="col-md-9" style="padding: 10px;">
+				<div class="col-md-7 col-md-offset-2">
+					<div class="input-group">
+						<input type="text" class="form-control" onkeydown="onKeyDown(event)" placeholder="请输入股票代码，例：600666" id="stockCodeSearch"/>
+						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+					</div>
+				</div>
+				<img src="http://image.sinajs.cn/newchart/daily/n/sh601006.gif" class="img-responsive" style="width: auto" alt="Clinque Terre">
+				<img src="http://image.sinajs.cn/newchart/min/n/sh601006.gif" class="img-responsive" style="width: auto" alt="Clinque Terre">
+			</div>
+		</div>
+	</div>
+	
+	<!--===页脚===-->
+	<section id="action" class="call-to-action-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="call-to-action-wrap">
+                        <div class="call-to-action-title">
+                            <h3>有任何建议或意见，欢迎随时联系我们。感谢您帮助我们完善LEMONQUANT平台。<br/>联系邮箱：xxxxx@163.com</h3>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+	
+	<!--=== footer ===-->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-5 align-self-center"> <div><p>LEMONQUANT All Rights Reserved.</p></div>
+
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-7 align-self-center">
+                    <ul class="list-inline footer-menu">
+                        <li class="list-inline-item"><a href="index.html">Home</a></li>
+                        <li class="list-inline-item"><a href="market.html">Market</a></li>
+                        <li class="list-inline-item"><a href="strategy.html">Strategy</a></li>
+                        <li class="list-inline-item"><a href="#">Community</a></li>
+						<li class="list-inline-item"><a href="#">News</a></li>
+						<li class="list-inline-item"><a href="login.html">Personal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	<!--=== offset canvas / sidebar ===-->
+    <div class="popup" id="popup">
+        <div class="popup-content"><div class="left-slide-sidebar ">
+            <div class="canvas-title">Offset Canvas Menu</div>
+            <ul class="list-unstyled slide-sidebar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="market.html">Market</a></li>
+                <li><a href="strategy.html">Strategy</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="login.html">Personal</a></li>
+            </ul>
+        </div>
+            <a href="#close" class="popup-close">&times;</a>
+        </div>
+    </div>
+	
+	
+	<!--============ JavaScript ===========-->
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> 
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/plugins/slick/slick.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+	
+	<!--<script>
+	// 方法一：
+		if(jQuery) {
+			alert('jQuery已加载!');
+		}
+		else {
+			alert('jQuery未加载!');
+		}
+	</script>-->
+	
+	<!--- 左侧标签栏图标变化 --->
+	<script>
+    $(function(){
+      $(".panel-heading").click(function(e){
+        /*切换折叠指示图标*/
+        $(this).find("span").toggleClass("glyphicon-chevron-down");
+        $(this).find("span").toggleClass("glyphicon-chevron-up");
+      });
+    });
+    </script>
+	
+	<script type="text/javascript">
+	function onKeyDown(event){
+		var e = event || window.event || arguments.callee.caller.arguments[0];
+		if(e && e.keyCode==27){ // 按 Esc 
+		 //要做的事情
+		}
+		if(e && e.keyCode==113){ // 按 F2 
+		  //要做的事情
+		}            
+		if(e && e.keyCode==13){ // enter 键
+		  alert("此处回车触发搜索事件");
+		}
+
+		}
+	</script>        
+
+</body>
+</html>

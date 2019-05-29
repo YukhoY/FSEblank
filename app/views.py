@@ -1,12 +1,87 @@
-from flask import render_template,request
+
+from flask import render_template, flash, redirect, session, url_for, request, g
 import app.charts as charts
+from flask_login import login_user, logout_user, current_user, login_required
+from .forms import *
+from .models import User
+from . import app, db, lm
 
-from . import app
+@lm.user_loader
+def load_user(id):
+    return User.query.get(int(id))
 
+@app.before_request
+def before_request():
+    g.user = current_user
 
 @app.route("/")
-def hello():
-    return render_template("index.html")
+@app.route("/index")
+@app.route("/index.html")
+def index():
+    return render_template("index.html", title='index', us=g.user)
+
+
+@app.route("/login", methods=['GET', 'POST'])
+@app.route("/login.html", methods=['GET', 'POST'])
+def login():
+    if g.user is not None and g.user.is_authenticated:
+        return redirect(url_for('index'))
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('无效的用户名或密码')
+            return redirect(url_for('login'))
+        login_user(user)
+        return redirect(request.args.get('next') or url_for('index'))
+    return render_template('login.html', title='login', form=LoginForm(), us=g.user)
+
+@app.route('/market')
+@app.route('/market.html')
+@login_required
+def market():
+    return render_template('market.html', title='market')
+
+@app.route("/strategy", methods=['GET', 'POST'])
+@app.route("/strategy.html", methods=['GET', 'POST'])
+@login_required
+def strategy():
+    if request.method == 'GET':
+        return render_template('strategy.html', title='strategy', us=g.user)
+
+@app.route("/signup", methods=['GET', 'POST'])
+@app.route("/signup.html", methods=['GET', 'POST'])
+def signup():
+    if g.user is not None and g.user.is_authenticated:
+        return redirect(url_for('index'))
+    form = SignupForm()
+    if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('注册成功!请登录!')
+        return redirect(url_for('login'))
+    return render_template('signup.html', title='signup', form=form, us=g.user)
+
+@app.route("/news", methods=['GET', 'POST'])
+@app.route("/news.html", methods=['GET', 'POST'])
+def news():
+    if request.method == 'GET':
+        return render_template('news.html', title='news', us=g.user)
+
+@app.route("/MyStrategy", methods=['GET', 'POST'])
+@app.route("/MyStrategy.html", methods=['GET', 'POST'])
+@login_required
+def MyStrategy():
+    if request.method == 'GET':
+        return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
+
+@app.route('/logout')
+def logout():
+    print(current_user, '退出登录')
+    logout_user()
+    return redirect(url_for('index'))
 #title='首页'
 
 @app.route('/market.html')
@@ -61,11 +136,15 @@ def bar():
 
 '''
 
+
 '''
 @app.route('/market.html')
 def bar3d():
 
     return render_template('market.html')
+=======
+
+>>>>>>> 585357ef0d1451bd91a848760a69779652ca91cf
 
 
 @app.route('/boxplot')
@@ -296,13 +375,12 @@ def timeline():
 
 
 '''
-'''
+
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("404.html"), 404
+    return render_template("404.html", title='404', us=g.user), 404
 
 
 @app.errorhandler(500)
 def page_not_found(e):
-    return render_template("500.html"), 500
-'''
+    return render_template("500.html", title='404', us=g.user), 500
