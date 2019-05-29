@@ -1,6 +1,6 @@
 
 {% extends 'base.html' %}
-	{% block content %}
+{% block content %}
 	<!--=== page header ===-->
     <section class="page-header d-flex align-items-center">
         <div class="container-fluid">
@@ -11,31 +11,8 @@
         </div>
     </section>
 
-
-	{% for jsfile_name in script_list %}
-        <script src="../static/echarts/{{ jsfile_name }}.js"></script>
-    {% endfor %}
-	<div class="my-charts">
-        {{ myechart|safe }}
-    </div>
-
-
 	<!--=== 行情搜索栏 ===-->
-	<div class="container-fluid">
-		<div class="row">
-			<form action="/market.html" method="post">
-                <ul>
-				<legend>输入股票信息</legend>
-				<li style="float: left; list-style: none;"><input name="code" placeholder="<股票名称>-<股票代码> eg.上证指数-sz ps:其实名称可以随便写" value="{{ code }}"></li>
-				<li style="float: left; list-style: none;"><input name="startdate" placeholder="开始日期: xxxx/xx/xx" value="{{ startdate }}"></li>
-				<li style="float: left; list-style: none;"><input name="enddate" placeholder="结束日期: xxxx/xx/xx" value="{{ enddate }}"></li>
-				<li style="float: left; list-style: none;"><input name="interval" placeholder="时间间隔: D|M|W|5|15|30|60" value="{{ interval }}"></li>
-				<li style="float: left; list-style: none;"><button type="submit">GO! </button></li>
-                </ul>
-			</form>
-
-		</div>
-	</div>
+	<!--=== 股票详细信息 ===-->
 
 
 	<!--=== 行情列表 ===-->
@@ -133,20 +110,4 @@
 		</div>
 	</div>
 
-	
-	<!--===页脚===-->
-	<section id="action" class="call-to-action-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="call-to-action-wrap">
-                        <div class="call-to-action-title">
-                            <!--<div class="text-center"><a href="#" class="btn btn-primary main-btn">Download Apps </a></div>-->
-                            <h3>有任何建议或意见，欢迎随时联系我们。感谢您帮助我们完善LEMONQUANT平台。<br/>联系邮箱：xxxxx@163.com</h3>
-						</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 {% endblock %}

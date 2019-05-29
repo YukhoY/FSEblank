@@ -36,11 +36,7 @@ def login():
         return redirect(request.args.get('next') or url_for('index'))
     return render_template('login.html', title='login', form=LoginForm(), us=g.user)
 
-@app.route('/market')
-@app.route('/market.html')
-@login_required
-def market():
-    return render_template('market.html', title='market')
+
 
 @app.route("/strategy", methods=['GET', 'POST'])
 @app.route("/strategy.html", methods=['GET', 'POST'])
@@ -85,16 +81,18 @@ def logout():
 #title='首页'
 
 @app.route('/market.html')
+@login_required
 def first_meet():
     #默认沪深信息
     hs = charts.bar.create_hs()#return page
-    print("股票样例")
     return render_template('market.html',
                            myechart=hs.render_embed(),
-                           script_list=hs.js_dependencies.items)
+                           script_list=hs.js_dependencies.items,
+                           ug=g.user)
 
 
 @app.route('/market.html', methods=['POST'])
+@login_required
 def draw():
     code=[]
     code.append(request.form['code']+'-'+"Kline")
@@ -114,7 +112,8 @@ def draw():
         chart=charts.bar.stock_draw(code,mode_combo,startdate,enddate,optInterval,width1,length1)
         return render_template('market.html',
                                myechart=chart.render_embed(),
-                              script_list=chart.js_dependencies.items)
+                              script_list=chart.js_dependencies.items,
+                               us=g.user)
     else:
         pass
         #return render_template() 返回错误页面提示信息

@@ -80,6 +80,7 @@
     </section>
 	
 	<!--=== 股票详细信息 ===-->
+    <form action="/market.html" method="post">
 	<div class="container-fluid">
 		<div class="row">
 			<!--- 股票列表折叠栏 --->
@@ -89,126 +90,103 @@
 						<div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab">
 							<!-- 利用data-target指定要折叠的分组列表 -->
 							<h4 class="panel-title">
-								沪深A股
+								股票1
 								<span class="glyphicon glyphicon-chevron-down right"></span>
 							</h4>
 						</div>
 						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
 						<div id="collapseListGroup1" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
 							<ul class="list-group">
+
 								<li class="list-group-item">
-									<!-- 利用data-target指定URL -->
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-1
-									</button>
+									<label for="code">股票代码：</label><input id="code" name="code" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
 								</li>
 								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-2
-									</button>
+									<label for="startdate">开始日期：</label><input name="startdate" id="startdate" type="date" value="{{ startdate }}"/>
 								</li>
 								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-3
-									</button>
-								</li>
-								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项1-4
-									</button>
+                                    <label for="interval">时间间隔：</label>
+                                    <select name="inteval" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
 								</li>
 							</ul>
 						</div>
 						<div class="panel panel-primary leftMenu">
 							<div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
 								<h4 class="panel-title">
-									上证A股
+									股票2
 									<span class="glyphicon glyphicon-chevron-down right"></span>
 								</h4>
 							</div>
 						</div>
 						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-						<div id="collapseListGroup2" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+						<div id="collapseListGroup2" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
 							<ul class="list-group">
+
 								<li class="list-group-item">
-									<!-- 利用data-target指定URL -->
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项2-1
-									</button>
+									<label for="code">股票代码：</label><input id="code" name="code" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
 								</li>
 								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项2-2
-									</button>
+									<label for="startdate">开始日期：</label><input name="startdate" id="startdate" type="date" value="{{ startdate }}"/>
 								</li>
 								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项2-3
-									</button>
+                                    <label for="interval">时间间隔：</label>
+                                    <select name="inteval" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
 								</li>
 							</ul>
 						</div>
 						<div class="panel panel-primary leftMenu">
 							<div class="panel-heading" id="collapseListGroupHeading3" data-toggle="collapse" data-target="#collapseListGroup3" role="tab" >
 								<h4 class="panel-title">
-									深证A股
+									股票3
 									<span class="glyphicon glyphicon-chevron-down right"></span>
 								</h4>
 							</div>
 						</div>
 						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-						<div id="collapseListGroup3" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading3">
+						<div id="collapseListGroup3" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
 							<ul class="list-group">
+
 								<li class="list-group-item">
-									<!-- 利用data-target指定URL -->
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-1
-									</button>
+									<label for="code">股票代码：</label><input  id="code" name="code" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
 								</li>
 								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-2
-									</button>
+									<label for="startdate">开始日期：</label><input name="startdate" id="startdate" type="date" value="{{ startdate }}"/>
 								</li>
 								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-3
-									</button>
-								</li>
-							</ul>
-						</div>
-						<div class="panel panel-primary leftMenu">
-							<div class="panel-heading" id="collapseListGroupHeading4" data-toggle="collapse" data-target="#collapseListGroup4" role="tab" >
-								<h4 class="panel-title">
-									创业板
-									<span class="glyphicon glyphicon-chevron-down right"></span>
-								</h4>
-							</div>
-						</div>
-						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-						<div id="collapseListGroup4" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading4">
-							<ul class="list-group">
-								<li class="list-group-item">
-									<!-- 利用data-target指定URL -->
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-1
-									</button>
-								</li>
-								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-2
-									</button>
-								</li>
-								<li class="list-group-item">
-									<button class="menu-item-left">
-										<span class="glyphicon glyphicon-triangle-right"></span>分组项3-3
-									</button>
+                                    <label for="interval">时间间隔：</label>
+                                    <select name="inteval" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
+                <li style="float: left; list-style: none;"><button type="submit">查询GO! </button></li>
 			</div>
+
 			<!--- 图像栏 --->
 			<div class="col-md-9" style="padding: 10px;">
 				<div class="col-md-7 col-md-offset-2">
@@ -217,12 +195,14 @@
 						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
 					</div>
 				</div>
-				<img src="http://image.sinajs.cn/newchart/daily/n/sh601006.gif" class="img-responsive" style="width: auto" alt="Clinque Terre">
-				<img src="http://image.sinajs.cn/newchart/min/n/sh601006.gif" class="img-responsive" style="width: auto" alt="Clinque Terre">
+				<div class="my-charts">
+                        {{ myechart|safe }}
+                </div>
 			</div>
 		</div>
 	</div>
-	
+
+    </form>
 	<!--===页脚===-->
 	<section id="action" class="call-to-action-2">
         <div class="container-fluid">
