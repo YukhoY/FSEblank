@@ -77,23 +77,15 @@
 	<!--=== 行情搜索栏 ===-->
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-3 offset-1 form-inline" style="padding: 10px 0 10px 0;">
-				<label style="margin-right: 10px;">菜单</label>
-				<select name="" class="market-select-box">
-					<option value="0">种类一</option>
-					<option value="1">种类二</option>
-					<option value="2">种类三</option>
-				</select>
-			</div>
-
 			<form action="/market.html" method="post">
+                <ul>
 				<legend>输入股票信息</legend>
-				<p><input name="code" placeholder="<股票名称>-<股票代码> eg.上证指数-sz ps:其实名称可以随便写" value="{{ code }}"></p>
-				<p><input name="startdate" placeholder="开始日期: xxxx/xx/xx" value="{{ startdate }}"></p>
-				<p><input name="enddate" placeholder="结束日期: xxxx/xx/xx" value="{{ enddate }}"></p>
-				<p><input name="interval" placeholder="时间间隔: D|M|W|5|15|30|60" value="{{ interval }}"></p>
-				<p><button type="submit">GO! </button></p>
-
+				<li style="float: left; list-style: none;"><input name="code" placeholder="<股票名称>-<股票代码> eg.上证指数-sz ps:其实名称可以随便写" value="{{ code }}"></li>
+				<li style="float: left; list-style: none;"><input name="startdate" placeholder="开始日期: xxxx/xx/xx" value="{{ startdate }}"></li>
+				<li style="float: left; list-style: none;"><input name="enddate" placeholder="结束日期: xxxx/xx/xx" value="{{ enddate }}"></li>
+				<li style="float: left; list-style: none;"><input name="interval" placeholder="时间间隔: D|M|W|5|15|30|60" value="{{ interval }}"></li>
+				<li style="float: left; list-style: none;"><button type="submit">GO! </button></li>
+                </ul>
 			</form>
 
 		</div>
