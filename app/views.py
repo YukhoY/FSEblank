@@ -2,7 +2,7 @@
 from flask import render_template, flash, redirect, session, url_for, request, g
 import app.charts as charts
 from flask_login import login_user, logout_user, current_user, login_required
-from .forms import LoginForm
+from .forms import *
 from .models import User
 from . import app, db, lm
 
@@ -30,30 +30,33 @@ def login():
         print('已经登陆')
         return redirect(url_for('index'))
     form = LoginForm()
-    print('收到表格')
-    print(form.username.data, form.password.data)
-    print(form.validate_on_submit())
+    #print('收到表格')
+    #print(form.username.data, form.password.data)
+    #print(form.validate_on_submit())
     if form.validate_on_submit():
-        print('判断了有输入')
-        print(form.username.data, form.password.data)
+        #print('判断了有输入')
+        #print(form.username.data, form.password.data)
         user = User.query.filter_by(username=form.username.data).first()
-        print('获取user信息')
+        #print('获取user信息')
         if user is None or not user.check_password(form.password.data):
-            print('用户名或密码无效')
+            #print('用户名或密码无效')
             flash('无效的用户名或密码')
             return redirect(url_for('login'))
-        print('登陆成功')
-        return render_template('index.html')
-    print('输入无效')
+        login_user(user)
+        #print('登陆成功')
+        return redirect(request.args.get('next') or url_for('index'))
+    #print('输入无效')
     return render_template('login.html', form=LoginForm())
 
 @app.route('/market')
 @app.route('/market.html')
+@login_required
 def market():
     return render_template('market.html')
 
 @app.route("/strategy", methods=['GET', 'POST'])
 @app.route("/strategy.html", methods=['GET', 'POST'])
+@login_required
 def strategy():
     if request.method == 'GET':
         return render_template('strategy.html')
@@ -61,8 +64,32 @@ def strategy():
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])
 def signup():
-    if request.method == 'GET':
-        return render_template('signup.html')
+    if g.user is not None and g.user.is_authenticated:
+        print('已经登陆')
+        return redirect(url_for('index'))
+    form = SignupForm()
+    for i in form.email.errors:
+        print(i)
+    for i in form.username.errors:
+        print(i)
+    for i in form.password.errors:
+        print(i)
+    for i in form.password2.errors:
+        print(i)
+    print(form.username.errors)
+    print(form.password.errors)
+    print(form.password2.errors)
+    print('收到表格')
+    if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        print('已写入数据库')
+        flash('注册成功!请登录!')
+        return redirect(url_for('login'))
+    print('输入无效')
+    return render_template('signup.html', form=form)
 
 @app.route("/news", methods=['GET', 'POST'])
 @app.route("/news.html", methods=['GET', 'POST'])
@@ -72,6 +99,7 @@ def news():
 
 @app.route("/MyStrategy", methods=['GET', 'POST'])
 @app.route("/MyStrategy.html", methods=['GET', 'POST'])
+@login_required
 def MyStrategy():
     if request.method == 'GET':
         return render_template('MyStrategy.html')
@@ -79,6 +107,7 @@ def MyStrategy():
 @app.route('/logout')
 def logout():
     logout_user()
+    print('退出登录')
     return redirect(url_for('index'))
 #title='首页'
 

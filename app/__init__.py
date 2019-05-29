@@ -12,5 +12,5 @@ bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 lm = LoginManager()
 lm.init_app(app)
-
+lm.login_view = 'login'
 from . import views, models
