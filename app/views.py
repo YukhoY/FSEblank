@@ -6,6 +6,7 @@ from .forms import *
 from .models import User
 from . import app, db, lm
 import time
+from strategy_run import shell_call as sc
 
 @lm.user_loader
 def load_user(id):
@@ -37,7 +38,7 @@ def login():
         return redirect(request.args.get('next') or url_for('index'))
     return render_template('login.html', title='login', form=LoginForm(), us=g.user)
 
-
+filename=''#global
 @app.route("/strategy", methods=['GET', 'POST'])
 @app.route("/strategy.html", methods=['GET', 'POST'])
 @login_required
@@ -48,10 +49,27 @@ def strategy():
         print(request.form)
         print(request.form.get("strname"))
         print(request.form.get("strcodes"))
+        #global is a little dangerous
         filename = './strategies/' + g.user.username + '_' + time.strftime('%Y%m%d%H%M%S', time.localtime(time.time())) +  '_' + request.form.get("strname").replace(" ", "%20") + ".py"
         with open(filename, 'w', encoding="utf-8") as f:
             f.write(request.form.get("strcodes").replace("\r\n", "\n"))
-        return render_template('strategy.html', title='strategy', us=g.user)
+
+
+        graph=sc.shell_call(filename)
+
+        return render_template('StrategyBack.html', title='strategy', us=g.user,
+                               myechart=graph.render_embed())
+
+
+@app.route("/MyStrategy", methods=['GET', 'POST'])
+@app.route("/MyStrategy.html", methods=['GET', 'POST'])
+@login_required
+def MyStrategy():
+    if request.method == 'GET':
+        return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
+    if request.method == 'POST':  #
+        return render_template('StrategyBack.html',us=g.user)
+
 
 @app.route("/community", methods=['GET', 'POST'])
 @app.route("/community.html", methods=  ['GET', 'POST'])
@@ -81,12 +99,8 @@ def news():
     if request.method == 'GET':
         return render_template('news.html', title='news', us=g.user)
 
-@app.route("/MyStrategy", methods=['GET', 'POST'])
-@app.route("/MyStrategy.html", methods=['GET', 'POST'])
-@login_required
-def MyStrategy():
-    if request.method == 'GET':
-        return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
+
+
 
 @app.route('/logout')
 def logout():
@@ -109,7 +123,6 @@ def draw():
                                us=g.user)
 
     if request.method=='POST':
-
 
         code=[]
         if request.form['code']!='':
