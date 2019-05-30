@@ -1,0 +1,161 @@
+{% extends 'base.html'%}
+	{% block content %}	
+	<!--=== page header ===-->
+    <section class="page-header d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="page-header-content text-center">
+                <!--<div class="page-header-tag">Post Detail</div>-->
+                <div class="page-header-title" style="font-family: 'MF ShangYa (Noncommercial)'">设计股票交易策略</div>
+            </div>
+        </div>
+    </section>
+	
+	<!--=== 策略功能栏 ===-->	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3" style="padding: 10px">
+				<a href="strategy.html" class="btn btn-block btn-info" role="button">新建策略</a>
+				<a href="MyStrategy.html" class="btn btn-block btn-info" role="button">我的策略</a>
+				<a href="#" class="btn btn-block btn-info" role="button">策略回测</a>
+			</div>
+			
+			<div class="col-9" style="padding: 10px; border: 1px solid #7E7E7E;">
+				<!--=== 表格样式 ===-->
+				<div class="table-responsive">
+					<table class="table table-hover table-bordered table-striped">
+						
+						<thead style="font-size: 10px;">
+							<tr>
+								<th data-field="back-profit">回测收益</th>
+								<th data-field="year-back-profit">回测年化收益</th>
+								<th data-field="alpha">Alpha</th>
+								<th data-field="beta">Beta</th>
+								<th data-field="sharpe">Sharpe</th>
+								<th data-field="sortino">Sortino</th>
+								<th data-field="info-risk">Information Ratio</th>
+							</tr>
+						</thead>
+						<tbody style="font-size: 12px;">
+							<td>11.300%</td>
+						</tbody>
+						<thead style="font-size: 12px;">
+							<th data-field="base-profit">基准收益</th>
+							<th data-field="year-base-profit">基准年化收益</th>
+							<th data-field="volatility">Volatility</th>
+							<th data-field="max-drawdown">MaxDrawdown</th>
+							<th data-field="track-error">Tracking Error</th>
+							<th data-field="down-risk">Downside Risk</th>
+							<th data-field="max-back">最大回撤/最大回撤持续期</th>
+						</thead>
+					</table>
+				</div>
+				<!--=== 导出后端表格 ===-->
+				<div class="table-responsive">
+					<table id="para-table">
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			initTable();
+		})
+		function initTable(){
+			//先销毁表格
+			$("#bootstrapTable").bootstrapTable({
+			//服务器数据的请求方式 'get' 或 'post'。
+			method: 'get',
+			//隔行变色效果
+			striped: true,
+			//设置为 true 会在表格底部显示分页条。
+			pagination: false,
+			//请求后台的URL
+			url: '/MsgDealCenterAction/listData',
+			//服务器返回的数据类型。
+			dataType: 'json',
+			//工具按钮用哪个容器
+			toolbar: '#toolbar', 
+			//是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性
+			cache: false, 
+				
+			columns:[
+				{
+					title:'回测收益',
+					field:'back-profit',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'回测年化收益',
+					field:'year-back-profit',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'Alpha',
+					field:'alpha',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'Beta',
+					field:'beta',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'Sharpe',
+					field:'sharpe',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'Sortino',
+					field:'sortino',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'Information-Ratio',
+					field:'info-ratio',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'基准收益',
+					field:'base-profit',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'基准年化收益',
+					field:'year-base-profit',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'Volatility',
+					field:'volatility',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'MaxDrawdown',
+					field:'max-drawdown',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'TrackingError',
+					field:'track-error',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'DownsideRisk',
+					field:'back-profit',
+					align:'center',
+					vAlign:'middle'
+				},{
+					title:'最大回撤',
+					field:'max-back',
+					align:'center',
+					vAlign:'middle'
+				}
+			]
+		}
+	</script>
+
+{% endblock %}
