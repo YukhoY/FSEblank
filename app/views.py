@@ -65,6 +65,13 @@ def community():
     if request.method == 'GET':
         return render_template('community.html', title='strategy', us=g.user)
 
+@app.route("/community-content", methods=['GET', 'POST'])
+@app.route("/community-content.html", methods=  ['GET', 'POST'])
+@login_required
+def community_content():
+    if request.method == 'GET':
+        return render_template('community-content.html', title='strategy', us=g.user)
+
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])
 def signup():
@@ -85,6 +92,12 @@ def signup():
 def news():
     if request.method == 'GET':
         return render_template('news.html', title='news', us=g.user)
+
+@app.route("/news-content", methods=['GET', 'POST'])
+@app.route("/news-content.html", methods=['GET', 'POST'])
+def news_content():
+    if request.method == 'GET':
+        return render_template('news-content.html', title='news', us=g.user)
 
 @app.route("/MyStrategy", methods=['GET', 'POST'])
 @app.route("/MyStrategy.html", methods=['GET', 'POST'])
