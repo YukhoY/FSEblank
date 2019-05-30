@@ -55,10 +55,20 @@ def strategy():
             f.write(request.form.get("strcodes").replace("\r\n", "\n"))
 
 
-        graph=sc.shell_call(filename)
+        graph,summary=sc.shell_call(filename)
 
         return render_template('StrategyBack.html', title='strategy', us=g.user,
-                               myechart=graph.render_embed())
+                               myechart=graph.render_embed(),alpha=summary['alpha'],beta=summary['beta'],
+                               sharpe=summary['sharpe'],info_ratio=summary['information_ratio'],
+                               sortino=summary['sortino'],total_returns=summary['total_returns'],
+                               annualized_returns=summary['annualized_returns'],
+                               benchmark_total_returns=summary['benchmark_total_returns'],
+                               benchmark_annualized_returns=summary['benchmark_annualized_returns'],
+                               volatility=summary['volatility'],
+                               max_drawdown=summary['max_drawdown'],tracking_error=summary['tracking_error'],
+                               downside_risk=summary['downside_risk'],total_value=summary['total_value']
+                               )
+
 
 
 @app.route("/MyStrategy", methods=['GET', 'POST'])

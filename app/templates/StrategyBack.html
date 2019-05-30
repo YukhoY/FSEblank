@@ -36,7 +36,13 @@
 							</tr>
 						</thead>
 						<tbody style="font-size: 12px;">
-							<td>11.300%</td>
+							<td>{{ total_returns }}</td>
+                            <td>{{ annualized_returns }}</td>
+                            <td>{{ alpha }}</td>
+                            <td>{{ beta }}</td>
+                            <td>{{ sharpe }}</td>
+                            <td>{{ sortino }}</td>
+                            <td>{{ info_ratio }}</td>
 						</tbody>
 						<thead style="font-size: 12px;">
 							<th data-field="base-profit">基准收益</th>
@@ -45,8 +51,17 @@
 							<th data-field="max-drawdown">MaxDrawdown</th>
 							<th data-field="track-error">Tracking Error</th>
 							<th data-field="down-risk">Downside Risk</th>
-							<th data-field="max-back">最大回撤/最大回撤持续期</th>
+							<th data-field="max-back">期末总资产</th>
 						</thead>
+                        <tbody style="font-size: 12px;">
+							<td>{{ benchmark_total_returns }}</td>
+                            <td>{{ benchmark_annualized_returns }}</td>
+                            <td>{{ volatility }}</td>
+                            <td>{{ max_drawdown }}</td>
+                            <td>{{ tracking_error }}</td>
+                            <td>{{ downside_risk }}</td>
+                            <td>{{ total_value }}</td>
+						</tbody>
 					</table>
 				</div>
 				<!--=== 导出后端表格 ===-->
@@ -59,108 +74,11 @@
 			
 		</div>
 	</div>
-	
-	<script type="text/javascript">
-		$(function(){
-			initTable();
-		})
-		function initTable(){
-			//先销毁表格
-			$("#bootstrapTable").bootstrapTable({
-			//服务器数据的请求方式 'get' 或 'post'。
-			method: 'get',
-			//隔行变色效果
-			striped: true,
-			//设置为 true 会在表格底部显示分页条。
-			pagination: false,
-			//请求后台的URL
-			url: '/MsgDealCenterAction/listData',
-			//服务器返回的数据类型。
-			dataType: 'json',
-			//工具按钮用哪个容器
-			toolbar: '#toolbar', 
-			//是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性
-			cache: false, 
-				
-			columns:[
-				{
-					title:'回测收益',
-					field:'back-profit',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'回测年化收益',
-					field:'year-back-profit',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'Alpha',
-					field:'alpha',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'Beta',
-					field:'beta',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'Sharpe',
-					field:'sharpe',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'Sortino',
-					field:'sortino',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'Information-Ratio',
-					field:'info-ratio',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'基准收益',
-					field:'base-profit',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'基准年化收益',
-					field:'year-base-profit',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'Volatility',
-					field:'volatility',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'MaxDrawdown',
-					field:'max-drawdown',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'TrackingError',
-					field:'track-error',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'DownsideRisk',
-					field:'back-profit',
-					align:'center',
-					vAlign:'middle'
-				},{
-					title:'最大回撤',
-					field:'max-back',
-					align:'center',
-					vAlign:'middle'
-				}
-			]
-		}
-	</script>
-        <div class="col-md-9" style="padding: 10px;text-align: center;">
-				<div class="my-charts">
-                        {{ myechart|safe }}
-                </div>
-        </div>
+
+    <div class="col-md-9" style="padding: 10px;text-align: center;">
+            <div class="my-charts">
+                    {{ myechart|safe }}
+            </div>
+    </div>
 
 {% endblock %}
