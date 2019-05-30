@@ -140,16 +140,8 @@ def bar():
 '''
 
 
+
 '''
-@app.route('/market.html')
-def bar3d():
-
-    return render_template('market.html')
-=======
-
->>>>>>> 585357ef0d1451bd91a848760a69779652ca91cf
-
-
 @app.route('/boxplot')
 def boxplot():
     _boxplot = charts.boxplot.create_charts()
@@ -347,43 +339,4 @@ def wordcloud():
                            script_list=_wordcloud.get_js_dependencies())
 
 
-@app.route('/grid')
-def grid():
-    _grid = charts.grid.create_charts()
-    return render_template('base.html',
-                           title='Grid类',
-                           source_file='grid',
-                           myechart=_grid.render_embed(),
-                           script_list=_grid.get_js_dependencies())
-
-
-@app.route('/overlap')
-def overlap():
-    _overlap = charts.overlap.create_charts()
-    return render_template('base.html',
-                           title='Overlap类',
-                           source_file='overlap',
-                           myechart=_overlap.render_embed(),
-                           script_list=_overlap.get_js_dependencies())
-
-
-@app.route('/timeline')
-def timeline():
-    _timeline = charts.timeline.create_charts()
-    return render_template('base.html',
-                           title='Timeline类',
-                           source_file='timeline',
-                           myechart=_timeline.render_embed(),
-                           script_list=_timeline.get_js_dependencies())
-
-
 '''
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template("404.html", title='404', us=g.user), 404
-
-
-@app.errorhandler(500)
-def page_not_found(e):
-    return render_template("500.html", title='404', us=g.user), 500

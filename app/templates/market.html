@@ -90,17 +90,11 @@
 
 					</div>
 				</div>
-                <li style="float: left; list-style: none;"><button type="submit">查询GO! </button></li>
+                <li style="float: left; list-style: none;"><button type="submit" class="btn btn-success col-md-offset-12">查询GO! </button></li>
 			</div>
 
 			<!--- 图像栏 --->
-			<div class="col-md-9" style="padding: 10px;">
-				<div class="col-md-7 col-md-offset-2">
-					<div class="input-group">
-						<input type="text" class="form-control" onkeydown="onKeyDown(event)" placeholder="请输入股票代码，例：600666" id="stockCodeSearch"/>
-						<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-					</div>
-				</div>
+			<div class="col-md-9" style="padding: 10px;text-align: center;">
 				<div class="my-charts">
                         {{ myechart|safe }}
                 </div>
@@ -109,100 +103,5 @@
 	</div>
 
     </form>
-
-	<!--=== 行情列表 ===-->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="boxhead col-11">
-					<h2>※个股行情</h2>
-				</div>
-			<div class="col-2 offset-2 text-info" style="padding: 10px;">
-				<a href="#">全部股票</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">上证A股</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">深证A股</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">创业板</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">中小板</a>
-
-			</div>
-			<div class="table-responsive">
-				<table class="table table-hover" style="font-size: 10px;">
-					<thead>
-						<th style="width:6%">序号</th>
-                    		<th style="width:6%">代码</th>
-		                    <th style="width:8%">名称</th>
-		                    <th style="width:6%" ><a href="javascript:void(0)" field="xj" >现价<i></i></a></th>
-        		            <th style="width:9%"  class="cur"><a href="javascript:void(0)" field="zdf" order="desc"  class="desc">涨跌幅(%)<i></i></a></th>
-                 		    <th style="width:6%" ><a href="javascript:void(0)" field="zd" >涨跌<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="zs" >涨速(%)<i></i></a></th>
-     		                <th style="width:8%" ><a href="javascript:void(0)" field="hs" >换手(%)<i></i></a></th>
-            		        <th style="width:6%" ><a href="javascript:void(0)" field="lb" >量比<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="zf" >振幅(%)<i></i></a></th>
-        		            <th style="width:7%" ><a href="javascript:void(0)" field="cje" >成交额<i></i></a></th>
-                		    <th style="width:7%" ><a href="javascript:void(0)" field="ltg" >流通股<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="ltsz" >流通市值<i></i></a></th>
-        		            <th style="width:7%" ><a href="javascript:void(0)" field="syl" >市盈率<i></i></a></th>
-					</thead>
-					<tbody>
-						<tr>
-							<td>01</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>02</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>03</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
 
 {% endblock %}

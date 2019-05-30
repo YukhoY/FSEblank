@@ -2,6 +2,7 @@
 
 from pyecharts.charts import Kline, Line, Page,Grid,Timeline
 from pyecharts import options as opts
+from pyecharts.globals import ThemeType
 import tushare as ts
 import pandas as pd
 import re
@@ -13,7 +14,7 @@ def stock_draw(labels,mode_combo,startdate,optInterval,enddate=time.strftime("%Y
     startdate = startdate.replace("/", "-")  # 将参数日期转换为tushare的日期格式
     enddate = enddate.replace("/", "-")
 
-    tl = Timeline(init_opts=opts.InitOpts(width="1100px", height="500px"))
+    tl = Timeline(init_opts=opts.InitOpts(width="1100px", height="500px",theme=ThemeType.WONDERLAND))
 
 
     for label in labels:  # 对于传入的labels一张张作图
@@ -24,6 +25,7 @@ def stock_draw(labels,mode_combo,startdate,optInterval,enddate=time.strftime("%Y
 
         if mode_combo == "KLine":
             array = ts.get_k_data(label1[1], start=startdate, end=enddate, ktype=optInterval)
+
             # print(array)
             time = array['date'].tolist()  # array.date
             # 绘图方法
@@ -35,7 +37,7 @@ def stock_draw(labels,mode_combo,startdate,optInterval,enddate=time.strftime("%Y
                 #width=width1 * 10 / 11, height=(height1 * 10 / 11) / len(labels)
 
                 kline = (
-                    Kline()
+                    Kline(opts.InitOpts(theme=ThemeType.WONDERLAND))
                         .add_xaxis(time)
                         .add_yaxis(label1[0],data_li)
                         .set_global_opts(
@@ -121,7 +123,7 @@ def stock_draw(labels,mode_combo,startdate,optInterval,enddate=time.strftime("%Y
                                                 is_show=True, areastyle_opts=opts.AreaStyleOpts(opacity=1)
                                             ),
                                         ),
-                                        datazoom_opts=[opts.DataZoomOpts(pos_top="2%")],
+                                        datazoom_opts=[opts.DataZoomOpts(pos_top="10%")],
                                         title_opts=opts.TitleOpts(title=label1[0] + "-" + label1[2]))
                         .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
 
@@ -175,7 +177,7 @@ def stock_draw_welcome(labels,mode_combo,startdate,enddate,optInterval):
     startdate = startdate.replace("/", "-")  # 将参数日期转换为tushare的日期格式
     enddate = enddate.replace("/", "-")
 
-    tl = Timeline(init_opts=opts.InitOpts(width="1100px",height="500px"))
+    tl = Timeline(init_opts=opts.InitOpts(width="1100px",height="500px",theme=ThemeType.WONDERLAND))
 
     for label in labels:  # 对于传入的labels一张张作图
         label1 = re.split("-", label)
@@ -195,7 +197,7 @@ def stock_draw_welcome(labels,mode_combo,startdate,enddate,optInterval):
                 #width=width1 * 10 / 11, height=(height1 * 10 / 11) / len(labels)
 
                 kline = (
-                    Kline(init_opts=opts.InitOpts(width="1100px",height="500px"))
+                    Kline(init_opts=opts.InitOpts(width="1100px",height="500px",theme=ThemeType.WONDERLAND))
                         .add_xaxis(time)
                         .add_yaxis(label1[0],data_li)
 
@@ -208,7 +210,7 @@ def stock_draw_welcome(labels,mode_combo,startdate,enddate,optInterval):
                             is_show=True, areastyle_opts=opts.AreaStyleOpts(opacity=1)
                             ),
                         ),
-                        datazoom_opts=[opts.DataZoomOpts(pos_top="2%")],
+                        datazoom_opts=[opts.DataZoomOpts(pos_top="10%")],
                         title_opts=opts.TitleOpts(title=label1[0] + "-" + optInterval)
 
                     )
@@ -315,3 +317,5 @@ def stock_info_html():
     re_array=data[['code', 'name', 'changepercent', 'trade','open','high','low','settlement','volume','turnoverratio']]
     data_li = list(row.tolist() for index, row in re_array.iterrows())
     #以上接口获取特别慢。。。
+
+    
