@@ -19,5 +19,3 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-  </component>
-</project>

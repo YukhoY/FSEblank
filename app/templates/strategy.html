@@ -1,49 +1,19 @@
 {% extends 'base.html' %}
 	{% block content %}
+
+	<style type="text/css" media="screen">
+		#editor{
+			width: 100%;
+			height: 400px;
+		}
+	</style>
+
 <!--	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
 	<link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!--	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 	<script src="https://cdn.bootcss.com/moment.js/2.22.0/moment-with-locales.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-	<!--=== navigation ===-->
-	<header id="nav" class="header">
-		<!--menu-->
-		<div class="navbar navbar-expand-md navbar-light default-menu justify-content-between" role="navigation" style="background-color: #3D5C63">
-			<div class="container-fluid">
-				<a href="index.html" class="site-logo navbar-brand" style="color:#FFF010">LemonQuant</a>
-				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#v" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-				<div class="collapse navbar-collapse" id="v">
-                    <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link scroll" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="market.html">Market</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="strategy.html">Strategy</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="#testimonial">Community</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="#blog">News</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="login.html">Personal</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="dropdown nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="ion ion-ios-search-strong"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-right list-search">
-                                <li class="dropdown-item">
-                                    <form class="navbar-left nav-search" role="search">
-                                        <div class="form-inline">
-                                            <input class="form-control" placeholder="Search..." type="text">
-                                            <i class="fa fa-search"></i>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#popup"><i class="ion ion-navicon"></i></a></li>
-                    </ul>
-                </div>
-			</div>
-		</div>
-	</header>
-	
 	<!--=== page header ===-->
     <section class="page-header d-flex align-items-center">
         <div class="container-fluid">
@@ -63,67 +33,42 @@
 				<a href="#" class="btn btn-block btn-info" role="button">策略回测</a>
 			</div>
 			<div class="col-9" style="padding: 10px; border: 1px solid #7E7E7E;">
-				<form role="form">
+				<form role="form" action="/strategy" method="post" name="strform" id="strform">
 					<div class="str-name">
 						<div class="form-group form-inline">
 							<label for="exampleInputStrname">策略名称</label>
-							<input type="strname" class="form-control" id="exampleInputStrname" placeholder="输入策略名称" style="margin-left: 5px;">
+							<input type="strname" class="form-control" id="exampleInputStrname" placeholder="输入策略名称" style="margin-left: 5px;" name="strname" required="required">
 						</div>
 					</div>
-					<div class="parameters" style="padding-top: 10px;">
-						<form role="form" class="form-inline">
-							<div class="form-group form-inline">
-								<label for="benchmarkMenu">基准收益</label>
-								<select class="form-control" style="margin-left: 5px;">
-									<option>沪深300指数</option>
-									<option>上证50指数</option>
-									<option>中证500指数</option>
-								</select>
-								<label for="slippage" style="margin-left: 50px;">股票交易滑点</label>
-								<div class="input-group">
-									<input type="number" class="form-control" placeholder="输入百分比" aria-describedby="slippage" style="margin-left: 5px;">
-									<span class="input-group-text" id="slippage">%</span>
-								</div>
-							</div>
-							<div class="form-group form-inline">
-								<label for="vollimit-day">日级最大成交比例</label>
-								<div class="input-group">
-									<input type="number" class="form-control" placeholder="输入百分比" aria-describedby="vollimit-day" style="width: 120px; margin-left: 5px;">
-									<span class="input-group-text" id="vollimit-day">%</span>
-								</div>
-								<label for="vollimit-min" style="margin-left: 40px;">分钟级最大成交比例</label>
-								<div class="input-group">
-									<input type="number" class="form-control" placeholder="输入百分比" aria-describedby="vollimit-min" style="width: 120px; margin-left: 5px;">
-									<span class="input-group-text" id="vollimit-min">%</span>
-								</div>
-							</div>
-							<div class="form-group form-inline">
-								<label for="stock-choices">策略中的股票</label>
-								<form>
-									<textarea class="form-control" rows="3" placeholder="请输入股票代码和权重，以逗号隔开" style="margin-left: 5px;margin-top: 5px; width: 100%;"></textarea>
-								</form>
-							</div>
-							<div class="form-group form-inline">
-								<label>输入开始时间</label>
-								<input type="date" class="form-control" style="margin-left: 5px;" aria-describedby="starttime">
-								<label style="margin-left: 30px;">输入结束时间</label>
-								<input type="date" class="form-control" style="margin-left: 5px;" aria-describedby="endtime">
-							</div>
-							<div class="form-group form-inline">
-								<label>设置初始资金</label>
-								<input type="number" class="form-control" placeholder="输入初始资金量" aria-describedby="money" style="margin-left: 5px;">
-								<span class="input-group-text" id="money">¥</span>
-								<label for="frequency" style="margin-left: 30px;">运行频率</label>
-								<select class="form-control" style="margin-left: 5px;">
-									<option>每日</option>
-									<option>每分钟</option>
-								</select>
-							</div>
-						</form>
+					<div class="parameters" style="padding-top: 10px;padding-bottom: 10px;">
+						<pre id="editor" name="strpre"></pre>
+						<textarea id="strcodes" name="strcodes" hidden>123</textarea>
 					</div>
 					<button type="submit" class="btn btn-info">提交</button>
 				</form>
 			</div>
 		</div>
 	</div>
+<script src="../static/assets/src-min/ace.js" type="text/javascript"></script>
+<script src="../static/assets/src-min/ext-language_tools.js" type="text/javascript"></script>
+<script>
+	ace.require("ace/ext/language_tools");
+	var editor = ace.edit("editor");
+	editor.$blockScrolling = Infinity;
+	editor.setFontSize(16);
+	editor.session.setMode("ace/mode/python");
+	editor.setOptions({
+		enableBasicAutocompletion: true,
+		enableSnippets: true,
+		enableLiveAutocompletion: true
+	});
+	editor.setTheme("ace/theme/chrome");
+	editor.getSession().on('change', function() {
+		var script_val = editor.getValue();
+		$('textarea[name="strcodes"]').val(script_val);
+	});
+
+
+
+</script>
 {% endblock %}

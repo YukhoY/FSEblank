@@ -1,10 +1,11 @@
-
+#coding: utf8
 from flask import render_template, flash, redirect, session, url_for, request, g
 import app.charts as charts
 from flask_login import login_user, logout_user, current_user, login_required
 from .forms import *
 from .models import User
 from . import app, db, lm
+import time
 
 @lm.user_loader
 def load_user(id):
@@ -37,13 +38,27 @@ def login():
     return render_template('login.html', title='login', form=LoginForm(), us=g.user)
 
 
-
 @app.route("/strategy", methods=['GET', 'POST'])
 @app.route("/strategy.html", methods=['GET', 'POST'])
 @login_required
 def strategy():
     if request.method == 'GET':
         return render_template('strategy.html', title='strategy', us=g.user)
+    if request.method == 'POST':
+        print(request.form)
+        print(request.form.get("strname"))
+        print(request.form.get("strcodes"))
+        filename = './strategies/' + g.user.username + '_' + time.strftime('%Y%m%d%H%M%S', time.localtime(time.time())) +  '_' + request.form.get("strname").replace(" ", "%20") + ".py"
+        with open(filename, 'w', encoding="utf-8") as f:
+            f.write(request.form.get("strcodes").replace("\r\n", "\n"))
+        return render_template('strategy.html', title='strategy', us=g.user)
+
+@app.route("/community", methods=['GET', 'POST'])
+@app.route("/community.html", methods=  ['GET', 'POST'])
+@login_required
+def community():
+    if request.method == 'GET':
+        return render_template('community.html', title='strategy', us=g.user)
 
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])
