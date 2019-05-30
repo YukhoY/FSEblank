@@ -99,6 +99,21 @@
 	background-color: #117a8b;
 	color:#fff;
 }
+.btn-write{
+	float:right;
+	height: 34px;
+    line-height: 32px;
+    min-width: 100px;
+	display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+	border:none;
+	margin-right: 20%;
+	margin-top: 30px;
+	background-color: #117a8b;
+	color:#fff;
+}
 .tip{
 	float:left;
 	margin-top:3px;
