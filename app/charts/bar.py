@@ -177,7 +177,7 @@ def stock_draw_welcome(labels,mode_combo,startdate,enddate,optInterval):
     startdate = startdate.replace("/", "-")  # 将参数日期转换为tushare的日期格式
     enddate = enddate.replace("/", "-")
 
-    tl = Timeline(init_opts=opts.InitOpts(width="1100px",height="500px",theme=ThemeType.WONDERLAND))
+    tl = Timeline(init_opts=opts.InitOpts(width="1000px",height="500px",theme=ThemeType.WONDERLAND))
 
     for label in labels:  # 对于传入的labels一张张作图
         label1 = re.split("-", label)

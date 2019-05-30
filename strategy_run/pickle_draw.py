@@ -21,7 +21,7 @@ def draw_pfo_return(result):
     pfo_b_rtn = [round(i - 1,5) for i in static_unit_net_value_b]#benchmark
 
     rtn_line = (
-        Line()
+        Line(init_opts=opts.InitOpts(width="1400px",height="500px"))
             .add_xaxis(timeline)
             .add_yaxis("回测收益", pfo_rtn,
                        markline_opts=opts.MarkLineOpts(data=[opts.MarkLineItem(type_="average")]))
@@ -55,7 +55,7 @@ def draw_net_value(result):
     total_value_b = result['benchmark_portfolio']['total_value'].tolist()
 
     rtn_line = (
-        Line()
+        Line(init_opts=opts.InitOpts(width="1400px",height="500px"))
             .add_xaxis(timeline)
             .add_yaxis("回测总资产", total_value,
                        )
