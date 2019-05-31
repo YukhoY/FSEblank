@@ -3,7 +3,7 @@ from flask import render_template, flash, redirect, session, url_for, request, g
 import app.charts as charts
 from flask_login import login_user, logout_user, current_user, login_required
 from .forms import *
-from .models import User
+from .models import *
 from . import app, db, lm
 import time
 
@@ -62,8 +62,10 @@ def strategy():
 @app.route("/community.html", methods=  ['GET', 'POST'])
 @login_required
 def community():
-    if request.method == 'GET':
-        return render_template('community.html', title='strategy', us=g.user)
+    page = request.args.get('page', 1, type=int)
+    pagination = Post.query.order_by(Post.timestamp.desc()).paginate(page, per_page=20, error_out=False)
+    posts = pagination.items
+    return render_template('community.html', title='community', us=g.user, posts=posts, pagination=pagination, endpoint=page)
 
 @app.route("/community-content", methods=['GET', 'POST'])
 @app.route("/community-content.html", methods=  ['GET', 'POST'])
