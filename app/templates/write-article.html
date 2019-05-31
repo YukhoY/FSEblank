@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+	{% block content %}
+<!--=== write article section ===-->
+<link href="../static/assets/css/news.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/article.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/app.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/write.css" rel="stylesheet" type="text/css">
+
+<section class="container-fluid">
+	<div class="write-box">
+        <form action="write-article" method="post">
+		<textarea class="article-title" placeholder="请输入标题..." id="articletitle" name="articletitle"></textarea>
+		<textarea class="write-content" placeholder="请输入内容..." id="articlecontent" name="articlecontent"></textarea>
+		<input type=submit class="btn-push" value="发表帖子">
+        </form>
+	</div>
+</section>
+{% endblock%}

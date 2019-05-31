@@ -8,6 +8,7 @@
 <link href="../static/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/css/ionicons.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/css/news.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/article.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/css/pagination-bar.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/css/responsive.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/plugins/slick/slick-theme.scss.css" rel="stylesheet" type="text/css">
@@ -18,6 +19,7 @@
             <!--<input type="submit" name="新闻搜索" id="SearchNews" class="btn" value="GO">-->
         <!--</form>-->
     <!--</div>-->
+    <button class="btn-write"><a href="write-article">新建帖子</a></button>
     <li class="feedlist-home">
         {% if not posts %}
         <br>
@@ -35,7 +37,7 @@
             <dl class="news-bar">
 				<dt><a href="#" target="_blank" class="">头像</a></dt>
 				<div class="interval">&nbsp|&nbsp</div>
-                <dd class="website-name"> {{ p.author }}
+                <dd class="website-name"> {{ p.author.username }}
                 </dd>
                     <div class="interval">&nbsp|&nbsp</div>
                 <dd class="news-date"> {{ p.timestamp }}

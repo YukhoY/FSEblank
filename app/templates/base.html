@@ -27,12 +27,11 @@
                 </button>
 				<div class="collapse navbar-collapse" id="v">
                     <ul class="nav navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link scroll" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="market.html">Market</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="strategy.html">Strategy</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="community.html">Community</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="news.html">News</a></li>
-                        <li class="nav-item"><a class="nav-link scroll" href="personal">Personal</a></li>
+                        <li class="nav-item active"><a class="nav-link scroll" href="{{url_for('index')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="{{url_for('market')}}">Market</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="{{url_for('strategy')}}">Strategy</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="{{url_for('community')}}">Community</a></li>
+                        <li class="nav-item"><a class="nav-link scroll" href="{{url_for('news')}}">News</a></li>
                         <!--注释原本的下拉菜单<li class="dropdown nav-item"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">pages</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="blogpage.html"><i class="ion ion-chevron-right"></i>Blog Home page</a></li>
@@ -95,12 +94,11 @@
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-7 align-self-center">
                     <ul class="list-inline footer-menu">
-                        <li class="list-inline-item"><a href="index.html">Home</a></li>
-                        <li class="list-inline-item"><a href="market.html">Market</a></li>
-                        <li class="list-inline-item"><a href="strategy.html">Strategy</a></li>
-                        <li class="list-inline-item"><a href="community.html">Community</a></li>
-						<li class="list-inline-item"><a href="news.html">News</a></li>
-						<li class="list-inline-item"><a href="login.html">Personal</a></li>
+                        <li class="list-inline-item"><a href="{{url_for('index')}}">Home</a></li>
+                        <li class="list-inline-item"><a href="{{url_for('market')}}">Market</a></li>
+                        <li class="list-inline-item"><a href="{{url_for('strategy')}}">Strategy</a></li>
+                        <li class="list-inline-item"><a href="{{url_for('community')}}">Community</a></li>
+						<li class="list-inline-item"><a href="{{url_for('news')}}">News</a></li>
                     </ul>
                 </div>
             </div>
@@ -117,7 +115,6 @@
                 <li><a href="strategy.html">Strategy</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="news.html">News</a></li>
-                <li><a href="login.html">Personal</a></li>
             </ul>
         </div>
             <a href="#close" class="popup-close">&times;</a>

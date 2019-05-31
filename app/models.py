@@ -43,7 +43,7 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(100))
     body = db.Column(db.String(10000))
-    timestamp = db.Column(db.DateTime)
+    timestamp = db.Column(db.String(100))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     comments = db.relationship('Comment', backref='originpost', lazy='dynamic')
     def __repr__(self):
@@ -53,7 +53,7 @@ class Comment(db.Model):
     __tablename__ = 'comment'
     id = db.Column(db.Integer, primary_key = True)
     body = db.Column(db.String(1000))
-    timestamp = db.Column(db.DateTime)
+    timestamp = db.Column(db.String(100))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
 

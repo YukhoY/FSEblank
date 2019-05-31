@@ -5,7 +5,7 @@ from flask_login import login_user, logout_user, current_user, login_required
 from .forms import *
 from .models import *
 from . import app, db, lm
-import time
+import time, datetime
 
 @lm.user_loader
 def load_user(id):
@@ -75,15 +75,31 @@ def community_content(contentnum):
         newcom = request.form.get('comment_content')
         post = Post.query.get(contentnum)
         print(newcom)
-        newcomment = Comment(body=newcom, author= g.user, originpost=post )
+        newcomment = Comment(body=newcom, author= g.user, originpost=post, timestamp=time.strftime('%Y/%m/%d %H:%M:%S', time.localtime(time.time())))
         db.session.add(newcomment)
         db.session.commit()
-        comments = Comment.query.select(post.id)
+        comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.id.desc())
         return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
     if request.method == 'GET':
         post = Post.query.get(contentnum)
-        comments = Comment.query.filter_by(post_id=post.id)
+        comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.id.desc())
         return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
+
+@app.route("/write-article", methods=['GET', 'POST'])
+@app.route("/write-article.html", methods=  ['GET', 'POST'])
+@login_required
+def writearticle():
+    if request.method == 'POST':
+        artititle = request.form.get('articletitle')
+        artcont = request.form.get('articlecontent')
+        print(artititle, artcont)
+        newart = Post(title=artititle, body=artcont, author=g.user, timestamp=time.strftime('%Y/%m/%d %H:%M:%S', time.localtime(time.time())))
+        db.session.add(newart)
+        db.session.commit()
+        return redirect(url_for('community'))
+    if request.method == 'GET':
+        return render_template('write-article.html', title='write', us=g.user)
+
 
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])
