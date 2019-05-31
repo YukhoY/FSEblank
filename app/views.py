@@ -118,7 +118,7 @@ def writearticle():
         artititle = request.form.get('articletitle')
         artcont = request.form.get('articlecontent')
         print(artititle, artcont)
-        newart = Post(title='artititle', body=artcont, author=g.user, timestamp=time.strftime('%Y/%m/%d %H:%M:%S', time.localtime(time.time())))
+        newart = Post(title=artititle, body=artcont, author=g.user, timestamp=time.strftime('%Y/%m/%d %H:%M:%S', time.localtime(time.time())))
         db.session.add(newart)
         db.session.commit()
         return redirect(url_for('community'))
