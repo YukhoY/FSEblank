@@ -6,7 +6,7 @@ from strategy_run.pickle_draw import *
 
 def shell_call(name,
                bench_mark='000300.XSHG',
-               bundle='C:\\Users\\DELL\\.rqalpha\\bundle\\',
+               bundle='/root/.rqalpha/bundle',
                startdate='2016-06-01',enddate='2016-12-01',volume='100000',):
     result = name + '_result.pkl'
     shell_str = 'rqalpha run -f ' + name + ' -d ' + bundle + ' -s ' + startdate + ' -e ' + enddate + ' --account stock ' + volume + ' --benchmark ' + bench_mark + ' -o ' + result
