@@ -78,7 +78,7 @@ def MyStrategy():
     if request.method == 'GET':
         return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
     if request.method == 'POST':  #
-        return render_template('StrategyBack.html',us=g.user)
+        return render_template('StrategyBack.html', title='MyStrategy', us=g.user)
 
 
 @app.route("/community", methods=['GET', 'POST'])
@@ -102,11 +102,11 @@ def community_content(contentnum):
         db.session.add(newcomment)
         db.session.commit()
         comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.id.desc())
-        return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
+        return render_template('community-content.html', title='community-content', us=g.user, post = post, comment = comments)
     if request.method == 'GET':
         post = Post.query.get(contentnum)
         comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.id.desc())
-        return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
+        return render_template('community-content.html', title='community-content', us=g.user, post = post, comment = comments)
 
 
 
@@ -153,9 +153,7 @@ def news():
 def news_content(contentnum):
     if request.method == 'GET':
         post = News.query.get(contentnum)
-        return render_template('news-content.html', title='news', us=g.user, post = post)
-
-
+        return render_template('news-content.html', title='news-content', us=g.user, post = post)
 
 
 @app.route('/logout')
@@ -170,13 +168,13 @@ def logout():
 @app.route('/market.html', methods=['GET', 'POST'])
 @app.route('/market', methods=['GET', 'POST'])
 @login_required
-def draw():
+def market():
     if request.method=='GET':
         hs = charts.bar.create_hs()  # return page
         return render_template('market.html',
                                myechart=hs.render_embed(),
                                script_list=hs.js_dependencies.items,
-                               us=g.user)
+                               us=g.user, title = market)
 
     if request.method=='POST':
 
@@ -201,7 +199,7 @@ def draw():
             return render_template('market.html',
                                    myechart=chart.render_embed(),
                                   script_list=chart.js_dependencies.items,
-                                   us=g.user)
+                                   us=g.user, title = market)
         else:
             pass
         #return render_template() 返回错误页面提示信息
