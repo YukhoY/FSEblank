@@ -86,7 +86,7 @@ def MyStrategy():
 @login_required
 def community():
     page = request.args.get('page', 1, type=int)
-    pagination = Post.query.order_by(Post.timestamp.desc()).paginate(page, per_page=20, error_out=False)
+    pagination = Post.query.order_by(Post.id.desc()).paginate(page, per_page=20, error_out=False)
     posts = pagination.items
     return render_template('community.html', title='community', us=g.user, posts=posts, pagination=pagination, endpoint=page)
 
