@@ -67,12 +67,23 @@ def community():
     posts = pagination.items
     return render_template('community.html', title='community', us=g.user, posts=posts, pagination=pagination, endpoint=page)
 
-@app.route("/community-content", methods=['GET', 'POST'])
+@app.route("/community-content/<int:contentnum>", methods=['GET', 'POST'])
 @app.route("/community-content.html", methods=  ['GET', 'POST'])
 @login_required
-def community_content():
+def community_content(contentnum):
+    if request.method == 'POST':
+        newcom = request.form.get('comment_content')
+        post = Post.query.get(contentnum)
+        print(newcom)
+        newcomment = Comment(body=newcom, author= g.user, originpost=post )
+        db.session.add(newcomment)
+        db.session.commit()
+        comments = Comment.query.select(post.id)
+        return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
     if request.method == 'GET':
-        return render_template('community-content.html', title='strategy', us=g.user)
+        post = Post.query.get(contentnum)
+        comments = Comment.query.filter_by(post_id=post.id)
+        return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
 
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])

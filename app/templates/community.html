@@ -30,7 +30,7 @@
         {% endif %}
         {% for p in posts %}
         <div class="news-container">
-            <div class="news-title"> <a href="community-content/{{ p.id }}.html" style="font-family: 'MF ShangYa (Noncommercial)'">{{ p.title }}</a> </div>
+            <div class="news-title"> <a href="community-content/{{ p.id }}" style="font-family: 'MF ShangYa (Noncommercial)'">{{ p.title }}</a> </div>
             <div class="news-abstract">{{ p.body }} </div>
             <dl class="news-bar">
 				<dt><a href="#" target="_blank" class="">头像</a></dt>
@@ -74,7 +74,6 @@
     </li>
 </ul>
 {% endmacro %}
-
 {{ pagination_widget(pagination, 'community') }}
 <!--<div class="pagination-bar">-->
 	<!--<a href="#" class="page-prev disabled">&lt;</a>-->

@@ -3,34 +3,33 @@
 <link href="../static/assets/css/news.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/css/article.css" rel="stylesheet" type="text/css">
 <section class="article-container">
-    <div class="news-title" style="font-family: 'MF ShangYa (Noncommercial)'">讨论贴标题</div>
+    <div class="news-title" style="font-family: 'MF ShangYa (Noncommercial)'">{{post.title}}</div>
     <dl class="articleinfo-bar">
-        <dd class="website-name"><a href="#" target="_blank" class=""> 发布者用户名</a> </dd>
+        <dd class="website-name"><a href="#" target="_blank" class=""> {{post.author.username}}</a> </dd>
         <div class="interval">&nbsp&nbsp</div>
-        <dd class="news-date"> 5月30日 </dd>
+        <dd class="news-date"> {{post.timestamp}} </dd>
     </dl>
-    <div class="article-content">讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 讨论贴内容 </div>
+    <div class="article-content">{{post.body}}</div>
 </section>
 <div class="comment-edit-box">
-    <form id="commentform">
-        <textarea class="comment-content" name="comment_content" id="" placeholder="想评论点什么..."></textarea>
+    <form id="commentform" method="post">
+        <input class="comment-content" name="comment_content" id="comment_content" placeholder="想评论点什么..."></input>
+    <!--<div class="right-box"> <span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>-->
+        <button type="submit" class="btn-comment" value="发表评论">发表评论</button>
     </form>
-    <div class="right-box"> <span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>
-        <input type="submit" class="btn-comment" value="发表评论">
-    </div>
+    <!--</div>-->
 </div>
 <li class="comment-container">
+    {% if not comment %}
+    <br>
+    <h3 align="center">Oops, there is no comment.</h3>
+    <br>
+    {% endif %}
+    {% for c in comment %}
     <div class="info-box">
         <dt><a href="#" target="_blank" class="">头像</a></dt>
         <div class="interval">&nbsp&nbsp</div>
-        <span class="website-name"><a href="#" target="_blank" class="">发布者用户名</a></span> <span>：</span> <span class="comment">用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 </span> <span class="date" style="margin-left: 0">5月30日</span> <span class="floor-num">#1楼</span> </div>
-    <div class="info-box">
-        <dt><a href="#" target="_blank" class="">头像</a></dt>
-        <div class="interval">&nbsp&nbsp</div>
-        <span class="website-name"><a href="#" target="_blank" class="">发布者用户名</a></span> <span>：</span> <span class="comment">用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 </span> <span class="date" style="margin-left: 0">5月30日</span> <span class="floor-num">#2楼</span> </div>
-    <div class="info-box" style="border-bottom: none">
-        <dt><a href="#" target="_blank" class="">头像</a></dt>
-        <div class="interval">&nbsp&nbsp</div>
-        <span class="website-name"><a href="#" target="_blank" class="">发布者用户名</a></span> <span>：</span> <span class="comment">用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 用户评论 </span> <span class="date" style="margin-left: 0">5月30日</span> <span class="floor-num">#3楼</span> </div>
+        <span class="website-name"><a href="#" target="_blank" class="">{{c.author.username}}</a></span> <span>：</span> <span class="comment">{{c.body}}</span> <span class="date" style="margin-left: 0">{{c.timestamp}}</span></div>
+    {% endfor %}
 </li>
 {% endblock %}
