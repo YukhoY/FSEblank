@@ -31,7 +31,7 @@
         {% endif %}
         {% for p in posts %}
         <div class="news-container">
-            <div class="news-title"> <a href="news-content/{{ p.id }}" style="font-family: 'MF ShangYa (Noncommercial)'">{{ p.title }}</a> </div>
+            <div class="news-title"> <a href="news-content/{{ p.id }}" style="font-family: 'MF ShangYa (Noncommercial)'">{{ p.title }}{% if not p.title%}标题未取得{% endif %}</a> </div>
             <div class="news-abstract">{{ p.body }} </div>
             <dl class="news-bar">
 				<div class="interval">&nbsp|&nbsp</div>

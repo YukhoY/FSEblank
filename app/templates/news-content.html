@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 	{% block content %}
-<link href="assets/css/news.css" rel="stylesheet" type="text/css">
-<link href="assets/css/article.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/news.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/article.css" rel="stylesheet" type="text/css">
 <section class="article-container">
-    <div class="news-title" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</div>
+    <div class="news-title" style="font-family: 'MF ShangYa (Noncommercial)'">{{ post.title }}{% if not post.title%}标题未取得{% endif %}</div>
     <dl class="articleinfo-bar">
-        <dd class="website-name"><a href="#" target="_blank" class=""> 新闻社名称</a> </dd>
+        <dd class="website-name"><a href="#" target="_blank" class=""> {{ post.author }}</a> </dd>
         <div class="interval">&nbsp&nbsp</div>
-        <dd class="news-date"> 5月29日 </dd>
+        <dd class="news-date"> {{ post.timestamp }} </dd>
     </dl>
-    <div class="article-content">新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 </div>
+    <div class="article-content"> {{ post.body }}</div>
 </section>
 
 
