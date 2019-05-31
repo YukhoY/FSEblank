@@ -118,7 +118,7 @@ def writearticle():
         artititle = request.form.get('articletitle')
         artcont = request.form.get('articlecontent')
         print(artititle, artcont)
-        newart = Post(title=artititle, body=artcont, author=g.user, timestamp=time.strftime('%Y/%m/%d %H:%M:%S', time.localtime(time.time())))
+        newart = Post(title='artititle', body=artcont, author=g.user, timestamp=time.strftime('%Y/%m/%d %H:%M:%S', time.localtime(time.time())))
         db.session.add(newart)
         db.session.commit()
         return redirect(url_for('community'))
@@ -174,7 +174,7 @@ def market():
         return render_template('market.html',
                                myechart=hs.render_embed(),
                                script_list=hs.js_dependencies.items,
-                               us=g.user, title = market)
+                               us=g.user, title = 'market')
 
     if request.method=='POST':
 
@@ -199,7 +199,7 @@ def market():
             return render_template('market.html',
                                    myechart=chart.render_embed(),
                                   script_list=chart.js_dependencies.items,
-                                   us=g.user, title = market)
+                                   us=g.user, title = 'market')
         else:
             pass
         #return render_template() 返回错误页面提示信息
