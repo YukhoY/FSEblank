@@ -1,0 +1,84 @@
+{% extends 'base.html'%}
+	{% block content %}	
+	<!--=== page header ===-->
+    <section class="page-header d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="page-header-content text-center">
+                <!--<div class="page-header-tag">Post Detail</div>-->
+                <div class="page-header-title" style="font-family: 'MF ShangYa (Noncommercial)'">设计股票交易策略</div>
+            </div>
+        </div>
+    </section>
+	
+	<!--=== 策略功能栏 ===-->	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3" style="padding: 10px">
+				<a href="strategy.html" class="btn btn-block btn-info" role="button">新建策略</a>
+				<a href="MyStrategy.html" class="btn btn-block btn-info" role="button">我的策略</a>
+				<a href="#" class="btn btn-block btn-info" role="button">策略回测</a>
+			</div>
+			
+			<div class="col-9" style="padding: 10px; border: 1px solid #7E7E7E;">
+				<!--=== 表格样式 ===-->
+				<div class="table-responsive">
+					<table class="table table-hover table-bordered table-striped">
+						
+						<thead style="font-size: 10px;">
+							<tr>
+								<th data-field="back-profit">回测收益</th>
+								<th data-field="year-back-profit">回测年化收益</th>
+								<th data-field="alpha">Alpha</th>
+								<th data-field="beta">Beta</th>
+								<th data-field="sharpe">Sharpe</th>
+								<th data-field="sortino">Sortino</th>
+								<th data-field="info-risk">Information Ratio</th>
+							</tr>
+						</thead>
+						<tbody style="font-size: 12px;">
+							<td>{{ total_returns }}</td>
+                            <td>{{ annualized_returns }}</td>
+                            <td>{{ alpha }}</td>
+                            <td>{{ beta }}</td>
+                            <td>{{ sharpe }}</td>
+                            <td>{{ sortino }}</td>
+                            <td>{{ info_ratio }}</td>
+						</tbody>
+						<thead style="font-size: 12px;">
+							<th data-field="base-profit">基准收益</th>
+							<th data-field="year-base-profit">基准年化收益</th>
+							<th data-field="volatility">Volatility</th>
+							<th data-field="max-drawdown">MaxDrawdown</th>
+							<th data-field="track-error">Tracking Error</th>
+							<th data-field="down-risk">Downside Risk</th>
+							<th data-field="max-back">期末总资产</th>
+						</thead>
+                        <tbody style="font-size: 12px;">
+							<td>{{ benchmark_total_returns }}</td>
+                            <td>{{ benchmark_annualized_returns }}</td>
+                            <td>{{ volatility }}</td>
+                            <td>{{ max_drawdown }}</td>
+                            <td>{{ tracking_error }}</td>
+                            <td>{{ downside_risk }}</td>
+                            <td>{{ total_value }}</td>
+						</tbody>
+					</table>
+				</div>
+				<!--=== 导出后端表格 ===-->
+				<div class="table-responsive">
+					<table id="para-table">
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+    <div class="col-md-9" style="padding: 10px;text-align: center;">
+            <div class="my-charts">
+                    {{ myechart|safe }}
+            </div>
+    </div>
+
+{% endblock %}

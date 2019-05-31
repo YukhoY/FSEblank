@@ -14,3 +14,6 @@ lm = LoginManager()
 lm.init_app(app)
 lm.login_view = 'login'
 from . import views, models
+from news.get_news import *
+
+#runTask(get_news)

@@ -1,5 +1,10 @@
-
 .idea/workspace.xml
 *.pyc
 .idea/*
 __pycache__/*
+__pycache__/config.cpython-37.pyc
+app/__pycache__/__init__.cpython-37.pyc
+app/__pycache__/forms.cpython-37.pyc
+app/__pycache__/models.cpython-37.pyc
+app/__pycache__/views.cpython-37.pyc
+app/charts/__pycache__/bar.cpython-37.pyc
