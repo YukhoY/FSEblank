@@ -422,3 +422,11 @@ def wordcloud():
 
 
 '''
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html", title='404', us=g.user), 404
+
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template("500.html", title='500', us=g.user), 500
