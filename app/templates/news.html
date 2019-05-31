@@ -1,135 +1,89 @@
 {% extends 'base.html' %}
 	{% block content %}
+
 <link href="../static/assets/css/news.css" rel="stylesheet" type="text/css">
 <link href="../static/assets/css/pagination-bar.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/bootstrap-4.0.0-beta.3-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/app.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/ionicons.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/news.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/article.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/pagination-bar.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/css/responsive.css" rel="stylesheet" type="text/css">
+<link href="../static/assets/plugins/slick/slick-theme.scss.css" rel="stylesheet" type="text/css">
 <section class="news">
-    <div class="search-container">
-        <form action="" class="parent">
-            <input type="search" class="search" placeholder="Search..." align="middle">
-            <input type="submit" name="新闻搜索" id="SearchNews" class="btn" value="GO">
-        </form>
-    </div>
+    <!--<div class="search-container">-->
+        <!--<form action="" class="parent">-->
+            <!--<input type="search" class="search" placeholder="Search..." align="middle">-->
+            <!--<input type="submit" name="新闻搜索" id="SearchNews" class="btn" value="GO">-->
+        <!--</form>-->
+    <!--</div>-->
     <li class="feedlist-home">
+        {% if not posts %}
+        <br>
+        <br>
+        <br>
+        <h1 align="center">Ah oh, there is no content yet.</h1>
+        <br>
+        <br>
+        <br>
+        {% endif %}
+        {% for p in posts %}
         <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
+            <div class="news-title"> <a href="news-content/{{ p.id }}" style="font-family: 'MF ShangYa (Noncommercial)'">{{ p.title }}</a> </div>
+            <div class="news-abstract">{{ p.body }} </div>
             <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
+				<div class="interval">&nbsp|&nbsp</div>
+                <dd class="website-name"> {{ p.author }}
+                </dd>
                     <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
+                <dd class="news-date"> {{ p.timestamp }}
+                </dd>
             </dl>
         </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
-        <div class="news-container">
-            <div class="news-title"> <a href="新闻链接" style="font-family: 'MF ShangYa (Noncommercial)'">新闻标题</a> </div>
-            <div class="news-abstract"> 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 新闻摘要 </div>
-            <dl class="news-bar">
-                <dd class="website-name"> 新闻网站名称
-                <dd>
-                    <div class="interval">&nbsp|&nbsp</div>
-                <dd class="news-date"> 5月24日
-                <dd>
-            </dl>
-        </div>
+        {% endfor %}
     </li>
 </section>
-<div class="pagination-bar">
-	<a href="#" class="page-prev disabled">&lt;</a>
-	<a href="#" class="disabled">1</a>
-	<a href="#">2</a>
-	<a href="#">3</a>
-	<a href="#">4</a>
-	<span>...</span>
-	<a href="#">19</a> <a href="#">20</a>
-	<a href="#" class="page-next">&gt;</a>
-</div>
+{% macro pagination_widget(pagination, endpoint) %}
+<ul class="pagination-bar">
+    <li {% if not pagination.has_prev %} class="disabled"{% endif %} style="display: inline-block">
+        <a href="{% if pagination.has_prev %}{{ url_for(endpoint, page=pagination.prev_num, **kwargs) }}{% else %}#{% endif %}">
+            &laquo;
+        </a>
+    </li>
+    {% for p in pagination.iter_pages() %}
+        {% if p %}
+            {% if p == pagination.page %}
+            <li class="active" style="display: inline-block">
+                <a href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+            </li>
+            {% else %}
+            <li style="display: inline-block">
+                <a href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+            </li>
+            {% endif %}
+        {% else %}
+        <li class="disabled" style="display: inline-block"><a href="#">&hellip;</a></li>
+        {% endif %}
+    {% endfor %}
+    <li {% if not pagination.has_next %} class="disabled"{% endif %} style="display: inline-block">
+        <a href="{% if pagination.has_next %}{{ url_for(endpoint, page=pagination.next_num, **kwargs) }}{% else %}#{% endif %}">
+            &raquo;
+        </a>
+    </li>
+</ul>
+{% endmacro %}
+{{ pagination_widget(pagination, 'community') }}
+<!--<div class="pagination-bar">-->
+	<!--<a href="#" class="page-prev disabled">&lt;</a>-->
+	<!--<a href="#" class="disabled">1</a>-->
+	<!--<a href="#">2</a>-->
+	<!--<a href="#">3</a>-->
+	<!--<a href="#">4</a>-->
+	<!--<span>...</span>-->
+	<!--<a href="#">19</a>-->
+	<!--<a href="#">20</a>-->
+	<!--<a href="#" class="page-next">&gt;</a>-->
+<!--</div>-->
 {% endblock %}

@@ -85,6 +85,8 @@ def community_content(contentnum):
         comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.id.desc())
         return render_template('community-content.html', title='strategy', us=g.user, post = post, comment = comments)
 
+
+
 @app.route("/write-article", methods=['GET', 'POST'])
 @app.route("/write-article.html", methods=  ['GET', 'POST'])
 @login_required
@@ -119,14 +121,16 @@ def signup():
 @app.route("/news", methods=['GET', 'POST'])
 @app.route("/news.html", methods=['GET', 'POST'])
 def news():
-    if request.method == 'GET':
-        return render_template('news.html', title='news', us=g.user)
+    page = request.args.get('page', 1, type=int)
+    pagination = News.query.order_by(News.id.desc()).paginate(page, per_page=20, error_out=False)
+    posts = pagination.items
+    return render_template('news.html', title='news', us=g.user, posts=posts, pagination=pagination,endpoint=page)
 
-@app.route("/news-content", methods=['GET', 'POST'])
-@app.route("/news-content.html", methods=['GET', 'POST'])
-def news_content():
+@app.route("/news-content/<int:contentnum>", methods=['GET', 'POST'])
+def news_content(contentnum):
     if request.method == 'GET':
-        return render_template('news-content.html', title='news', us=g.user)
+        post = News.query.get(contentnum)
+        return render_template('news-content.html', title='news', us=g.user, post = post)
 
 @app.route("/MyStrategy", methods=['GET', 'POST'])
 @app.route("/MyStrategy.html", methods=['GET', 'POST'])
