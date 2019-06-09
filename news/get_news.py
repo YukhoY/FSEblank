@@ -10,14 +10,14 @@ from datetime import date, time, datetime, timedelta
 def runTask(func):
    # Init time
    global timer
-   timer = threading.Timer(100, func)
+   timer = threading.Timer(20, func)
    timer.start()
 
 
 
 def get_news():
     now = datetime.now()
-    strnow = now.strftime('%Y-%m-%d %H:%M:%S')
+    strnow = now.strftime('%Y-%m-%d')
     print(strnow)
     # First next run time
     '''
@@ -27,10 +27,14 @@ def get_news():
     print(strnext_time)
     '''
     pasttime = now - timedelta(days=1)
-    paststr = pasttime.strftime('%Y-%m-%d %H:%M:%S')
+    paststr = pasttime.strftime('%Y-%m-%d')
     print(paststr)
 
+    strnow.replace("/", "-")
+    paststr.replace("/", "-")
+
     df = pro.news(src='sina', start_date=strnow, end_date=paststr)
+
     print(df)
     for index, row in df.iterrows():
 
