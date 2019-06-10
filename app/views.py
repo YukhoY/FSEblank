@@ -5,6 +5,8 @@ from flask_login import login_user, logout_user, current_user, login_required
 from .forms import *
 from .models import User
 from . import app, db, lm
+import time
+from strategy_run import shell_call as sc
 
 @lm.user_loader
 def load_user(id):
@@ -36,18 +38,55 @@ def login():
         return redirect(request.args.get('next') or url_for('index'))
     return render_template('login.html', title='login', form=LoginForm(), us=g.user)
 
-@app.route('/market')
-@app.route('/market.html')
-@login_required
-def market():
-    return render_template('market.html', title='market')
-
+filename=''#global
 @app.route("/strategy", methods=['GET', 'POST'])
 @app.route("/strategy.html", methods=['GET', 'POST'])
 @login_required
 def strategy():
     if request.method == 'GET':
         return render_template('strategy.html', title='strategy', us=g.user)
+    if request.method == 'POST':
+        print(request.form)
+        print(request.form.get("strname"))
+        print(request.form.get("strcodes"))
+        #global is a little dangerous
+        filename = './strategies/' + g.user.username + '_' + time.strftime('%Y%m%d%H%M%S', time.localtime(time.time())) +  '_' + request.form.get("strname").replace(" ", "%20") + ".py"
+        with open(filename, 'w', encoding="utf-8") as f:
+            f.write(request.form.get("strcodes").replace("\r\n", "\n"))
+
+
+        graph,summary=sc.shell_call(filename)
+
+        return render_template('StrategyBack.html', title='strategy', us=g.user,
+                               myechart=graph.render_embed(),alpha=summary['alpha'],beta=summary['beta'],
+                               sharpe=summary['sharpe'],info_ratio=summary['information_ratio'],
+                               sortino=summary['sortino'],total_returns=summary['total_returns'],
+                               annualized_returns=summary['annualized_returns'],
+                               benchmark_total_returns=summary['benchmark_total_returns'],
+                               benchmark_annualized_returns=summary['benchmark_annualized_returns'],
+                               volatility=summary['volatility'],
+                               max_drawdown=summary['max_drawdown'],tracking_error=summary['tracking_error'],
+                               downside_risk=summary['downside_risk'],total_value=summary['total_value']
+                               )
+
+
+
+@app.route("/MyStrategy", methods=['GET', 'POST'])
+@app.route("/MyStrategy.html", methods=['GET', 'POST'])
+@login_required
+def MyStrategy():
+    if request.method == 'GET':
+        return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
+    if request.method == 'POST':  #
+        return render_template('StrategyBack.html',us=g.user)
+
+
+@app.route("/community", methods=['GET', 'POST'])
+@app.route("/community.html", methods=  ['GET', 'POST'])
+@login_required
+def community():
+    if request.method == 'GET':
+        return render_template('community.html', title='strategy', us=g.user)
 
 @app.route("/signup", methods=['GET', 'POST'])
 @app.route("/signup.html", methods=['GET', 'POST'])
@@ -70,12 +109,8 @@ def news():
     if request.method == 'GET':
         return render_template('news.html', title='news', us=g.user)
 
-@app.route("/MyStrategy", methods=['GET', 'POST'])
-@app.route("/MyStrategy.html", methods=['GET', 'POST'])
-@login_required
-def MyStrategy():
-    if request.method == 'GET':
-        return render_template('MyStrategy.html', title='MyStrategy', us=g.user)
+
+
 
 @app.route('/logout')
 def logout():
@@ -83,6 +118,50 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 #title='首页'
+
+
+
+@app.route('/market.html', methods=['GET', 'POST'])
+@app.route('/market', methods=['GET', 'POST'])
+@login_required
+def draw():
+    if request.method=='GET':
+        hs = charts.bar.create_hs()  # return page
+        return render_template('market.html',
+                               myechart=hs.render_embed(),
+                               script_list=hs.js_dependencies.items,
+                               us=g.user)
+
+    if request.method=='POST':
+
+        code=[]
+        if request.form['code']!='':
+            code.append(request.form['code']+'-'+"Kline")
+        if request.form['code2']!='':
+            code.append(request.form['code2']+'-'+"Kline")
+
+        print(code)
+        mode_combo = 'KLine'
+        startdate = request.form['startdate']
+        print(startdate)
+        optInterval = request.form['interval']
+        print(optInterval)
+        width1 = 0
+        length1 = 0
+        #以上内容要做正则性判断
+        ok=1
+        if ok==1:
+            chart=charts.bar.stock_draw(code,mode_combo,startdate,optInterval)
+            return render_template('market.html',
+                                   myechart=chart.render_embed(),
+                                  script_list=chart.js_dependencies.items,
+                                   us=g.user)
+        else:
+            pass
+        #return render_template() 返回错误页面提示信息
+
+
+
 
 '''
 @app.route('/bar')
@@ -298,43 +377,4 @@ def wordcloud():
                            script_list=_wordcloud.get_js_dependencies())
 
 
-@app.route('/grid')
-def grid():
-    _grid = charts.grid.create_charts()
-    return render_template('base.html',
-                           title='Grid类',
-                           source_file='grid',
-                           myechart=_grid.render_embed(),
-                           script_list=_grid.get_js_dependencies())
-
-
-@app.route('/overlap')
-def overlap():
-    _overlap = charts.overlap.create_charts()
-    return render_template('base.html',
-                           title='Overlap类',
-                           source_file='overlap',
-                           myechart=_overlap.render_embed(),
-                           script_list=_overlap.get_js_dependencies())
-
-
-@app.route('/timeline')
-def timeline():
-    _timeline = charts.timeline.create_charts()
-    return render_template('base.html',
-                           title='Timeline类',
-                           source_file='timeline',
-                           myechart=_timeline.render_embed(),
-                           script_list=_timeline.get_js_dependencies())
-
-
 '''
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template("404.html", title='404', us=g.user), 404
-
-
-@app.errorhandler(500)
-def page_not_found(e):
-    return render_template("500.html", title='404', us=g.user), 500

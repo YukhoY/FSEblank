@@ -4,11 +4,14 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 class User(UserMixin, db.Model):
+    __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(64), index = True, unique = True)
     email = db.Column(db.String(120), index = True, unique = True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
+    comments = db.relationship('Comment', backref='author', lazy='dynamic')
+    strategies = db.relationship('Strategy', backref='author', lazy='dynamic')
 
     @property
     def is_authenticated(self):
@@ -36,10 +39,46 @@ class User(UserMixin, db.Model):
 
 
 class Post(db.Model):
+    __tablename__ = 'post'
     id = db.Column(db.Integer, primary_key = True)
-    body = db.Column(db.String(140))
+    title = db.Column(db.String(100))
+    body = db.Column(db.String(10000))
     timestamp = db.Column(db.DateTime)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-
+    comments = db.relationship('Comment', backref='originpost', lazy='dynamic')
     def __repr__(self):
         return '<Post %r>' % (self.body)
+
+class Comment(db.Model):
+    __tablename__ = 'comment'
+    id = db.Column(db.Integer, primary_key = True)
+    body = db.Column(db.String(1000))
+    timestamp = db.Column(db.DateTime)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
+
+    def __repr__(self):
+        return '<Comment %r>' % (self.body)
+
+class News(db.Model):
+    __tablename__ = 'news'
+    id = db.Column(db.Integer, primary_key = True)
+    timestamp = db.Column(db.String(100))
+    title = db.Column(db.String(100))
+    body = db.Column(db.String(10000))
+    author = db.Column(db.String(100))
+
+    def __repr__(self):
+        return '<News %r>' % (self.body)
+
+class Strategy(db.Model):
+    __tablename__ = 'strategy'
+    id = db.Column(db.Integer, primary_key = True)
+    strname = db.Column(db.String(1000))
+    filename = db.Column(db.String(1000))
+    time = db.Column(db.String(1000))
+    result = db.Column(db.String(1000))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    def __repr__(self):
+        return '<Strategy %r>' % (self.body)
+

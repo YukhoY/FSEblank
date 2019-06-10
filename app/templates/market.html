@@ -1,5 +1,12 @@
+
+
 {% extends 'base.html' %}
-	{% block content %}
+
+{% block content %}
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.staticfile.org/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.staticfile.org/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+
 	<!--=== page header ===-->
     <section class="page-header d-flex align-items-center">
         <div class="container-fluid">
@@ -9,132 +16,96 @@
             </div>
         </div>
     </section>
-	
+
 	<!--=== 行情搜索栏 ===-->
+	<!--=== 股票详细信息 ===-->
+<form action="/market.html" method="post">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-3 offset-1 form-inline" style="padding: 10px 0 10px 0;">
-				<label style="margin-right: 10px;">菜单</label>
-				<select name="" class="market-select-box">
-					<option value="0">种类一</option>
-					<option value="1">种类二</option>
-					<option value="2">种类三</option>
-				</select>
-			</div>
-			<div class="col-8" style="padding: 10px 0 10px 0;">
-				<input type="text" class="search" placeholder="搜索">
-				<input type="button" name="" id="" class="btn">
-			</div>
-		</div>
-	</div>
-	
-	<!--=== 行情列表 ===-->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="boxhead col-11">
-					<h2>※个股行情</h2>
-				</div>
-			<div class="col-2 offset-2 text-info" style="padding: 10px;">
-				<a href="#">全部股票</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">上证A股</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">深证A股</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">创业板</a>
-			</div>
-			<div class="col-2 text-info" style="padding: 10px;">
-				<a href="#">中小板</a>
-			</div>
-			<div class="table-responsive">
-				<table class="table table-hover" style="font-size: 10px;">
-					<thead>
-						<th style="width:6%">序号</th>
-                    		<th style="width:6%">代码</th>
-		                    <th style="width:8%">名称</th>
-		                    <th style="width:6%" ><a href="javascript:void(0)" field="xj" >现价<i></i></a></th>
-        		            <th style="width:9%"  class="cur"><a href="javascript:void(0)" field="zdf" order="desc"  class="desc">涨跌幅(%)<i></i></a></th>
-                 		    <th style="width:6%" ><a href="javascript:void(0)" field="zd" >涨跌<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="zs" >涨速(%)<i></i></a></th>
-     		                <th style="width:8%" ><a href="javascript:void(0)" field="hs" >换手(%)<i></i></a></th>
-            		        <th style="width:6%" ><a href="javascript:void(0)" field="lb" >量比<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="zf" >振幅(%)<i></i></a></th>
-        		            <th style="width:7%" ><a href="javascript:void(0)" field="cje" >成交额<i></i></a></th>
-                		    <th style="width:7%" ><a href="javascript:void(0)" field="ltg" >流通股<i></i></a></th>
-		                    <th style="width:8%" ><a href="javascript:void(0)" field="ltsz" >流通市值<i></i></a></th>
-        		            <th style="width:7%" ><a href="javascript:void(0)" field="syl" >市盈率<i></i></a></th>
-					</thead>
-					<tbody>
-						<tr>
-							<td>01</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>02</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>03</td>
-							<td>0000000</td>
-							<td>0000000</td>
-							<td>0</td>
-							<td>6</td>
-							<td>0</td>
-							<td>5</td>
-							<td>10</td>
-							<td>0</td>
-							<td>2</td>
-							<td>0</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-	
-	<!--===页脚===-->
-	<section id="action" class="call-to-action-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="call-to-action-wrap">
-                        <div class="call-to-action-title">
-                            <!--<div class="text-center"><a href="#" class="btn btn-primary main-btn">Download Apps </a></div>-->
-                            <h3>有任何建议或意见，欢迎随时联系我们。感谢您帮助我们完善LEMONQUANT平台。<br/>联系邮箱：xxxxx@163.com</h3>
+			<!--- 股票列表折叠栏 --->
+			<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" style="padding: 10px;" id="tree well">
+				<div class="panel-group table-responsive" role="tablist">
+					<div class="panel panel-primary leftMenu">
+						<div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab">
+							<!-- 利用data-target指定要折叠的分组列表 -->
+							<h4 class="panel-title">
+								股票1
+								<span class="glyphicon glyphicon-chevron-down right"></span>
+							</h4>
 						</div>
-                    </div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup1" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+							<ul class="list-group">
+
+								<li class="list-group-item">
+									<label for="code">股票代码：</label><input id="code" name="code" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
+								</li>
+								<li class="list-group-item">
+									<label for="startdate">开始日期：</label><input name="startdate" id="startdate" type="date" value="{{ startdate }}"/>
+								</li>
+								<li class="list-group-item">
+                                    <label for="interval">时间间隔：</label>
+                                    <select name="interval" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
+								</li>
+							</ul>
+						</div>
+						<div class="panel panel-primary leftMenu">
+							<div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+								<h4 class="panel-title">
+									股票2
+									<span class="glyphicon glyphicon-chevron-down right"></span>
+								</h4>
+							</div>
+						</div>
+						<!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+						<div id="collapseListGroup2" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+							<ul class="list-group">
+
+								<li class="list-group-item">
+									<label for="code2">股票代码：</label><input id="code" name="code2" placeholder="<股票名称>-<股票代码>eg.上证指数-sz" value="{{ code }}">
+								</li>
+								<li class="list-group-item">
+									<label for="startdate2">开始日期：</label><input name="startdate2" id="startdate" type="date" value="{{ startdate }}"/>
+								</li>
+								<li class="list-group-item">
+                                    <label for="interval2">时间间隔：</label>
+                                    <select name="interval2" id="interval">
+                                        <option value="D">日</option>
+                                        <option value="W">周</option>
+                                        <option value="M">月</option>
+                                        <option value="5">5min</option>
+                                        <option value="15">15min</option>
+                                        <option value="30">30min</option>
+                                        <option value="60">60min</option>
+                                  </select>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+                <li style="float: left; list-style: none;"><button type="submit" class="btn btn-success col-md-offset-12">查询GO! </button></li>
+			</div>
+
+			<!--- 图像栏 --->
+			<div class="col-md-9" style="padding: 10px;text-align: center;">
+				<div class="my-charts">
+                        {{ myechart|safe }}
                 </div>
-            </div>
-        </div>
-    </section>
+			</div>
+            
+		</div>
+	</div>
+
+    </form>
+
+
 {% endblock %}

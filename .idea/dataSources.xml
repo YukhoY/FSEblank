@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="app" uuid="f174ae9a-d062-4d54-a63a-33888eeee518">
+    <data-source source="LOCAL" name="app" uuid="1d630b93-24bd-4c7c-9b79-6659acf31512">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\Desktop\课程相关\金融软件工程\FSEblank\app.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\DELL\Documents\GitHub\FSEblank\app.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
